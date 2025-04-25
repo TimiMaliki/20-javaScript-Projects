@@ -19,7 +19,6 @@
 //   console.log(value)
 // })
 
-
 // reset.addEventListener('click' , ()=>{
 //     value = 0
 //     number.style.color = "black"
@@ -27,8 +26,31 @@
 //   console.log(value)
 // })
 
-
 // OR
 
+let value = 0;
 
-const number = document.querySelector('.number')
+const number = document.querySelector(".number");
+const btns = document.querySelectorAll(".btn");
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const className = e.target.classList;
+    // console.log(className);
+    if (className.contains("increase-btn")) {
+      number.style.color = "gold";
+      const result = value++;
+      number.innerText = result;
+    } else if (className.contains("decrease-btn")) {
+      number.style.color = "#E178C5";
+      const result = value--;
+      number.innerText = result;
+    } else if (className.contains("reset-btn")) {
+      value = 0;
+      number.style.color = "black";
+      number.innerText = value;
+    } else {
+    //   console.log("nope");
+    }
+  });
+});
