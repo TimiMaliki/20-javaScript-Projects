@@ -24,25 +24,25 @@ const testimonials = [
 let currentArray = 0
 
 
-const e = (items) => {
+const showPeron = (person) => {
+    const items = testimonials[person]
     img.src  = items.image
     text.innerText = items.text
 }
 
 window.addEventListener('DOMContentLoaded' , ()=>{
- const items = testimonials[currentArray]
- el(items)
+ showPeron(currentArray)
 })
 
 
-// prev.addEventListener('click' , ()=>{
-//     const randomTestimonial = Math.floor(Math.random() * testimonials.length)
-//     const picked = testimonials[randomTestimonial]
-//      const image = document.querySelector('.image ')
-//        image.src = picked.image
-//      const text = document.querySelector('.lorem') 
-//      text.innerText = picked.text
 
 
-//     console.log(picked)
-// })
+prev.addEventListener('click' , ()=>{
+    currentArray--
+    showPeron(currentArray) 
+})
+
+next.addEventListener('click' , ()=>{
+    currentArray++
+    showPeron(currentArray) 
+})
