@@ -39,10 +39,18 @@ window.addEventListener('DOMContentLoaded' , ()=>{
 
 prev.addEventListener('click' , ()=>{
     currentArray--
+    if(currentArray < 0){
+        currentArray = testimonials.length - 1
+    }
+   
     showPeron(currentArray) 
 })
 
 next.addEventListener('click' , ()=>{
     currentArray++
+    if(currentArray > testimonials.length - 1){
+        currentArray = 0
+    }
+  
     showPeron(currentArray) 
 })
