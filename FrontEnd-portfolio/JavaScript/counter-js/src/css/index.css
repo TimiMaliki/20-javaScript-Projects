@@ -183,7 +183,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .ounter-btns{
+    .counter-btns{
     display: grid;
     place-content: center;
     }

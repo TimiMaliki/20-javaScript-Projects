@@ -45,12 +45,10 @@ btns.forEach((btn) => {
       number.style.color = "#E178C5";
       const result = value--;
       number.innerText = result;
-    } else if (className.contains("reset-btn")) {
+    } else{
       value = 0;
       number.style.color = "black";
       number.innerText = value;
-    } else {
-    //   console.log("nope");
     }
   });
 });
