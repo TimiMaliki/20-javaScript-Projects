@@ -6,17 +6,17 @@ const text = document.querySelector('.lorem')
 const testimonials = [
 {
     id : '1',
-    text : "Lorem ipsum dolor sit amet consectetur adipisicing elit aspernatur maxime pariatur possimus accusantium eius modi? Adipisci." ,
+    text : "I had a vision for my online store but didn’t know how to bring it to life. Alabi not only created a stunning site but also optimized it for performance and SEO. My traffic and sales have both gone up since launching. Couldn’t be happier! — Jason M., Founder of UrbanThreads" ,
     image : "./image/pexels-almustapha-adam-1663967297-30159714.jpg"
 },
 {
     id : '2',
-    text : "Lorem ipsum dolor sit amet consectetur adipisicing elit aspernatur maxime pariatur possimus accusantium eius modi? Adipisci." ,
+    text : "Working with Alabi was a game-changer for our business. They built us a beautiful, fast, and responsive website that truly reflects our brand. Communication was seamless, deadlines were met, and the final product exceeded our expectations. Highly recommended! — James ., Marketing Director at BloomCo",
     image : "./image/pexels-goodcitizen-2058659.jpg"
 },
 {
     id : '3',
-    text : "Lorem ipsum dolor sit amet consectetur adipisicing elit aspernatur maxime pariatur possimus accusantium eius modi? Adipisci." ,
+    text : "From start to finish, Alabi made the whole process stress-free. They listened carefully to what I needed, offered expert suggestions, and delivered a website that's both functional and elegant. I get compliments on it all the time! — Emily R., Photographer ",
     image : "./image/pexels-megwara-favour-222329541-30369690.jpg"
 },
 ]
