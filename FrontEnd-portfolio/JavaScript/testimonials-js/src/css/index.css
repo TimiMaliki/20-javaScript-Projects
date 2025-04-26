@@ -44,7 +44,7 @@ img{
 }
 .elements{
    padding: 0px 30px;
-   gap: 0.5rem;
+   /* gap: 0.5rem; */
 }
 .text{
    padding: 10px;
