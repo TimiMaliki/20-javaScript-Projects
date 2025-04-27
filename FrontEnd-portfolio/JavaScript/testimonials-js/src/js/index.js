@@ -1,5 +1,6 @@
 const prev = document.querySelector('.prev')
 const next = document.querySelector('.next')
+const random = document.querySelector('.random')
 const img = document.querySelector('.img')
 const text = document.querySelector('.lorem')
 
@@ -53,4 +54,12 @@ next.addEventListener('click' , ()=>{
     }
   
     showPeron(currentArray) 
+})
+
+random.addEventListener('click' , ()=>{
+
+    const randomImage = Math.floor(Math.random() *testimonials.length)
+    const select = testimonials[randomImage]
+    img.src  = select.image
+    text.innerText = select.text 
 })
