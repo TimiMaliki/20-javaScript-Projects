@@ -6,9 +6,8 @@
 body {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+   display: grid;
+   place-content: center;
 }
 .flex {
   display: flex;
@@ -16,6 +15,8 @@ body {
   align-items: center;
 }
 .container {
+  width: 700px;
+  height: 100%;
   box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
     rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
     rgba(240, 46, 170, 0.05) 0px 25px;
@@ -45,11 +46,7 @@ img {
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .elements {
-  padding: 0px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0rem;
+   gap: 1rem;
 }
 .text {
   text-align: center;
@@ -57,95 +54,49 @@ img {
 .lorem {
   font-size: 20px;
   color: #3c4043;
+  padding: 0px 20px;
 }
 
-.btn {
-  background-color: #3dd1e7;
-  border: 0 solid #e5e7eb;
-  box-sizing: border-box;
-  color: #000000;
-  display: flex;
-  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1.75rem;
-  padding: 0.75rem 1.65rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none #000000 solid;
-  text-decoration-thickness: auto;
-  width: 100%;
-  max-width: 460px;
-  position: relative;
+.btn{
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
   cursor: pointer;
-  transform: rotate(-2deg);
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-.btn:focus {
-  outline: 0;
+.btn:hover {
+  background-color: #fff;
 }
 
-.btn:after {
-  content: "";
-  position: absolute;
-  border: 1px solid #000000;
-  bottom: 4px;
-  left: 4px;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-}
-
-.btn:hover:after {
-  bottom: 2px;
-  left: 2px;
+.btn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
 
 @media (min-width: 768px) {
-  .btn {
-    padding: 0.75rem 3rem;
-    font-size: 1.25rem;
+  .btn{
+    min-width: 120px;
+    padding: 0 25px;
   }
 }
 
-@media (max-width: 568px) {
-  .testimonial {
-    display: none;
-  }
-  .image {
-    width: 100%;
-    margin-bottom: 4rem;
-  }
-  img {
-    width: 150px;
-    height: 150px;
-  }
-  .text {
-    font-size: 18px;
-    width: 250px;
-  }
-  .btn {
-    width: 200px;
-    max-width: 75px;
-  }
-}
 
-@media (max-width: 468px) {
-  .testimonial {
-    display: none;
-  }
-
-  .text {
-    font-size: 15px;
-    width: 230px;
-  }
-  .btn {
-    width: 100%;
-    max-width: 75px;
+@media (max-width: 768px) {
+  .container{
+   width: 100%;
   }
 }
