@@ -3,32 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hamburger-Menu</title>
-    <link rel="stylesheet" href="./src/css/index.css" />
-    <!--========== BOX ICONS ==========-->
+    <title>Navbar</title>
+    <!-- font-awesome -->
     <link
-      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="./src/index.css">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./src/index.css" />
   </head>
   <body>
     <nav>
-        <a href="#" class="logo">Alabi</a>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+         <h2>Alabi</h2>
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
+        <!-- links -->
+        <ul class="links">
+          <li>
+            <a href="index.html">home</a>
+          </li>
+          <li>
+            <a href="about.html">about</a>
+          </li>
+          <li>
+            <a href="projects.html">projects</a>
+          </li>
+          <li>
+            <a href="contact.html">contact</a>
+          </li>
+        </ul>
+        <!-- social media -->
+        <ul class="social-icons">
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-behance"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com">
+              <i class="fab fa-sketch"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
-</body>
-</html>
-
+    <!-- javascript -->
+    <script src="./src/index.js"></script>
+  </body>
 </html>
