@@ -240,7 +240,7 @@ nav {
   }
   .social-icons a {
     margin: 0 0.5rem;
-    color: var(--clr-primary-5);
+    color: #222;
     transition: var(--transition);
   }
   .social-icons a:hover {
