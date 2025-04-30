@@ -1,14 +1,17 @@
-const plusIcon = document.querySelectorAll('.question-btn')
-const minusIcon = document.querySelectorAll('.minus-icon')
+// const minusIcon = document.querySelectorAll('.minus-icon')
 const questionText = document.querySelector('.question-text')
-const p = questionText.querySelectorAll('p')
+const questions = document.querySelectorAll('.question')
 
-plusIcon.forEach((icon) => {
-        icon.addEventListener('click' , ()=>{
-               p.forEach((text) =>{
-                 console.log(text)
-                 text.classList.remove('question-text')
-               })
+questions.forEach((question)=>{
+    const plusIcon = question.querySelector('.question-btn')
+    plusIcon.addEventListener('click' , ()=> {
+        questions.forEach((item) => {
+             if(item !== plusIcon){
+               questionText.classList.remove('show-text')
+             }
         })
+        
+        question.classList.toggle('show-text')
+    })
+
 })
-    
