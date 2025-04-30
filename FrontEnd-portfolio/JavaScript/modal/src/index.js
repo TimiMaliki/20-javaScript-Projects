@@ -6,3 +6,7 @@ const modalOverLay = document.querySelector('.modal-overlay')
 openModal.addEventListener('click' , ()=>{
   modalOverLay.classList.add('open-modal')
 })
+
+closeModal.addEventListener('click' , ()=>{
+    modalOverLay.classList.remove('open-modal')
+  })
