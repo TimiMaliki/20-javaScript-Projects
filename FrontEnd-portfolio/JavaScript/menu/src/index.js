@@ -130,28 +130,39 @@ const menu = [
   ];
 
   const section = document.querySelector('.section-center')
+  const  btns = document.querySelectorAll(".filter-btn")
+
 
 
   window.addEventListener('DOMContentLoaded' , ()=>{
-
-const displayMenu = menu.map((item)=>{
-  return `
-  <article class="menu-item">
-  <img src="${item.img}" alt="menu item" class="photo" />
-  <div class="item-info">
-    <header>
-      <h4>${item.title}</h4>
-      <h4 class="price">${item.price}</h4>
-    </header>
-    <p class="item-text">
-     ${item.desc}
-    </p>
-  </div>
-</article>
-  
-  `
-}).join("")
-
-section.innerHTML = displayMenu
-
+         populateData(menu)
   })
+
+  btns.forEach(btn =>{
+    btn.addEventListener('click' , (e)=>{
+    const dataSet = e.target.dataset.id
+    console.log(dataSet)
+    })
+  })
+
+  const populateData = (data) => {
+    const displayMenu = data.map((item)=>{
+        return `
+        <article class="menu-item">
+        <img src="${item.img}" alt="menu item" class="photo" />
+        <div class="item-info">
+          <header>
+            <h4>${item.title}</h4>
+            <h4 class="price">${item.price}</h4>
+          </header>
+          <p class="item-text">
+           ${item.desc}
+          </p>
+        </div>
+      </article>
+        
+        `
+      }).join("")
+
+      section.innerHTML = displayMenu
+  }
