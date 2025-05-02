@@ -200,7 +200,7 @@ Menu
   margin: 0 0.5rem;
   letter-spacing: 1px;
   border-radius: var(--radius);
-  padding: 0.375rem 0.35rem;
+  padding: 0.375rem 0.75rem;
   color: #000;
   cursor: pointer;
   transition: var(--transition);
@@ -261,5 +261,11 @@ Menu
   }
   .photo {
     height: 150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .filter-btn {
+    padding: 0.375rem 0.35rem;
   }
 }
