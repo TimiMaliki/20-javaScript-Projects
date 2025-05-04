@@ -14,13 +14,28 @@ navbar.addEventListener("click", () => {
 const linkContainerHeight = container.getBoundingClientRect().height
 const linksHeight = links.getBoundingClientRect().height
 
-console.log(linksHeight)
+// console.log(linksHeight)
 
 if(linkContainerHeight === 0){
- container.style.height = `${linksHeight}px`
+    container.style.height = `${linksHeight}px`
 }else{
     container.style.height = 0
 }
-
-
 });
+
+
+const nav = document.querySelector('#nav')
+const topLink = document.querySelector('')
+
+window.addEventListener('scroll' , ()=> {
+
+    const navHeight = nav.getBoundingClientRect().height
+    const windowsHeight = window.pageYOffset
+   if(windowsHeight > navHeight || windowsHeight > 500){
+        nav.classList.add('fixed-nav')
+
+   }else{
+    nav.classList.remove('fixed-nav')
+   }
+
+})

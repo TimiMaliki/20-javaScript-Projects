@@ -204,7 +204,8 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-white);
+  background:#f7f7f7;
+  color: #fff;
   box-shadow: var(--light-shadow);
 }
 .fixed-nav .links a {
@@ -393,4 +394,5 @@ footer p {
         height: 50px;
         color: #000;
       }
+      
 }
