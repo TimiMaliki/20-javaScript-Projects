@@ -204,8 +204,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background:#f7f7f7;
-  color: #fff;
+  background: var(--clr-white);
   box-shadow: var(--light-shadow);
 }
 .fixed-nav .links a {
@@ -235,7 +234,7 @@ nav {
 }
 .brand {
   height: 50px;
-  color: #fff;
+  color: #000;
 }
 .links-container {
   height: 0;
@@ -368,7 +367,6 @@ footer p {
   place-items: center;
   border-radius: var(--radius);
   color: var(--clr-white);
-  animation: bounce 2s ease-in-out infinite;
   visibility: hidden;
   z-index: -100;
 }
@@ -377,22 +375,9 @@ footer p {
   z-index: 100;
 }
 
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 @media (max-width : 800px){
-    .brand {
-        height: 50px;
+    .brand{
         color: #000;
-      }
-      
+    }
 }
