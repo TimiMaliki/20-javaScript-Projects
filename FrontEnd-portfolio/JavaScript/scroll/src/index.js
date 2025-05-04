@@ -25,17 +25,21 @@ if(linkContainerHeight === 0){
 
 
 const nav = document.querySelector('#nav')
-const topLink = document.querySelector('')
+const topLink = document.querySelector('.top-link')
 
 window.addEventListener('scroll' , ()=> {
 
     const navHeight = nav.getBoundingClientRect().height
     const windowsHeight = window.pageYOffset
-   if(windowsHeight > navHeight || windowsHeight > 500){
+   if(windowsHeight > navHeight ){
         nav.classList.add('fixed-nav')
-
+    
    }else{
     nav.classList.remove('fixed-nav')
    }
 
+
+   if(windowsHeight > 500){
+    topLink.classList.toggle('show-link')
+   }
 })
