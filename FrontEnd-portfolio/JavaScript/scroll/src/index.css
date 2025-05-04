@@ -387,3 +387,10 @@ footer p {
     transform: scale(1);
   }
 }
+
+@media (max-width : 800px){
+    .brand {
+        height: 50px;
+        color: #000;
+      }
+}
