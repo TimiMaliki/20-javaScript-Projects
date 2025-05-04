@@ -298,12 +298,12 @@ nav {
     color: var(--clr-white);
   }
 }
+
 /* hero */
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0, 0, 0, 0.7)),
-    url(./WhatsApp\ Image\ 2025-03-06\ at\ 12.21.00\ PM\ \(1\).jpeg) center/cover no-repeat;
-    
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.9)),
+    url(./WhatsApp\ Image\ 2025-03-06\ at\ 12.21.01\ PM.jpeg) center/cover no-repeat;
 }
 .banner {
   min-height: 100vh;
