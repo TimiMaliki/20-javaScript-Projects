@@ -10,10 +10,11 @@ about.addEventListener("click", (e) => {
     btns.forEach((btn) => {
       btn.classList.remove("active");
       e.target.classList.add("active");
-      console.log(btn);
+    //   console.log(btn);
+    //   console.log(e.target);
     });
     content.forEach((article) => {
-      console.log(article);
+    //   console.log(article);
       article.classList.remove("active");
     });
 
@@ -21,3 +22,5 @@ about.addEventListener("click", (e) => {
     el.classList.add("active");
   }
 });
+
+
