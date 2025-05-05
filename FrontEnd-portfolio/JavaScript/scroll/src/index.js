@@ -43,3 +43,37 @@ window.addEventListener('scroll' , ()=> {
     topLink.classList.toggle('show-link')
    }
 })
+
+
+const scrollLinks = document.querySelectorAll('.scroll-link')
+
+scrollLinks.forEach((link)=>{
+  link.addEventListener('click' , (e)=>{
+     e.preventDefault()
+     const id = e.target.getAttribute('href').slice(1)
+     console.log(id)
+     const el = document.getElementById(id)
+     
+
+     const navBarHeight = nav.getBoundingClientRect().height
+     const containerHeight =   container.getBoundingClientRect().height
+     const fixedNav = nav.classList.contains('fixed-nav')
+     let position = el.offsetTop  - navBarHeight
+
+
+    if (!fixedNav) {
+        position = position - navBarHeight
+    }
+
+    if (navBarHeight > 82) {
+        position = position + containerHeight;
+      }
+
+     window.scrollTo({
+        left : 0 ,
+        top : position
+     })
+
+     container.style.height = 0
+  })
+})
