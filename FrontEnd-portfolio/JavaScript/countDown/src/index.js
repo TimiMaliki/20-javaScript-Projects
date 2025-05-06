@@ -1,7 +1,3 @@
-// const  days = document.querySelector('.days')
-// const  hours = document.querySelector('.hours')
-// const  mins = document.querySelector('.minutes')
-// const  seconds = document.querySelector('.seconds')
 
 const months = [
     'January',
@@ -29,6 +25,9 @@ const months = [
 
 
 const giveaway = document.querySelector('.giveaway')
+const items = document.querySelectorAll('.deadline-format h4')
+const deadLine = document.querySelectorAll('.deadline')
+
 
 const futureDate = new Date(2025, 4 , 5, 2, 39, 58 )
 const year = futureDate.getFullYear()
@@ -51,6 +50,7 @@ console.log(futureTime)
      const aDay = 24 * 60 * 60 * 1000
      const anHour = 60 * 60 * 1000
      const aMinute = 60*1000
+     const aSecond = 1000
 
      let days = dT / aDay
      days = Math.floor(days)
@@ -58,10 +58,21 @@ console.log(futureTime)
      let hours = (dT % aDay) / anHour
      hours = Math.floor(hours)
 
-     let minutes = (dT % anHour) / anHour
-     minutes = Math.floor(anHour)
+     let minutes = (dT % anHour) / aMinute
+     minutes = Math.floor(minutes)
 
-     console.log(hours , minutes)
+     let seconds = (dT % aMinute) / aSecond
+     seconds = Math.floor(seconds)
+
+      const myDateArray = [days , hours , minutes , seconds]
+
+      items.forEach((item , index) => {
+               item.innerHTML = myDateArray[index]
+      })
+      
+        
+    
+           
  }
   getRemainingTime()
 
