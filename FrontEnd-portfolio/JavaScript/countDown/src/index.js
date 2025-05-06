@@ -28,8 +28,14 @@ const giveaway = document.querySelector('.giveaway')
 const items = document.querySelectorAll('.deadline-format h4')
 const deadLine = document.querySelectorAll('.deadline')
 
+let extendedDate = new Date()
+let extendedYear = extendedDate.getFullYear()
+let  extendedMonth = extendedDate.getMonth() 
+let extendedDay = extendedDate.getDay()
 
-const futureDate = new Date(2025, 4 , 25, 2, 39, 58 )
+let  futureDate = new Date(extendedYear, extendedMonth  , extendedDay + 10 , 2, 39, 58 )
+// let futureDate = new Date(2025, 4, 24, 11, 30, 0)
+
 const year = futureDate.getFullYear()
 const day = futureDate.getDay()
 const month =  futureDate.getMonth()
@@ -47,13 +53,13 @@ const futureTime = futureDate.getTime()
  const getRemainingTime  = () => {
     const today = new Date().getTime()
     
-    let dT;
+    const dT =   futureTime - today
 
-    if(futureDate.getDate() < 10){
-       dT =  today - futureTime
-    }else{
-      dT = futureTime - today
-    }
+    // if(futureDate.getDate() < 10){
+        //  dt = today - futureTime
+    // }else{
+    //   dT = futureTime - today
+    // }
     
 
  
