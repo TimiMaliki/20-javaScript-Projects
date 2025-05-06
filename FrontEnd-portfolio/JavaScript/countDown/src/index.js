@@ -1,7 +1,7 @@
-const  days = document.querySelector('.days')
-const  hours = document.querySelector('.hours')
-const  mins = document.querySelector('.minutes')
-const  seconds = document.querySelector('.seconds')
+// const  days = document.querySelector('.days')
+// const  hours = document.querySelector('.hours')
+// const  mins = document.querySelector('.minutes')
+// const  seconds = document.querySelector('.seconds')
 
 const months = [
     'January',
@@ -46,8 +46,22 @@ console.log(futureTime)
 
  const getRemainingTime  = () => {
     const today = new Date().getTime()
-     const dT = futureTime - today
-     console.log(dt)
+     const dT =  today - futureTime
+
+     const aDay = 24 * 60 * 60 * 1000
+     const anHour = 60 * 60 * 1000
+     const aMinute = 60*1000
+
+     let days = dT / aDay
+     days = Math.floor(days)
+
+     let hours = (dT % aDay) / anHour
+     hours = Math.floor(hours)
+
+     let minutes = (dT % anHour) / anHour
+     minutes = Math.floor(anHour)
+
+     console.log(hours , minutes)
  }
   getRemainingTime()
 
