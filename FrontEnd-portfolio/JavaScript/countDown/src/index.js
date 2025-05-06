@@ -66,8 +66,18 @@ console.log(futureTime)
 
       const myDateArray = [days , hours , minutes , seconds]
 
+       const format = (item) => {
+            if(item < 10){
+                return item = `0${item}`
+            }else{
+              return item
+            }
+       }
+
+      
+
       items.forEach((item , index) => {
-               item.innerHTML = myDateArray[index]
+               item.innerHTML = format(myDateArray[index])
       })
       
         
