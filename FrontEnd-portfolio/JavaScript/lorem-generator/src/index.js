@@ -22,34 +22,34 @@ form.addEventListener('submit' , (e) => {
    const random = Math.floor(Math.random() * text.length)
    const  show = text[random] 
 
-//    if(isNaN(value) || value < 0 || value > 9){
-//     document.querySelector('.lorem-text').innerHTML = `<p class=result>${show}</p>`
-//    }else{
-//         let dummyText = text.slice(0,value)
-
-//         dummyText = dummyText.map((text) => {
-//             return `${text}`
-//         }).join("")
-
-//         document.querySelector('.lorem-text').innerHTML = dummyText
-//    }
-
-if(isNaN(value) || value < 0 || value > 9 || value === 0){
-    document.querySelector('.lorem-text').innerHTML = `<p class=result>Error(Negative number , Greater than 9 , Equall to 0)</p>`
-}
-else if(isNaN(value) || value > 0 || value < 10){
-    let dummyText = text.slice(0,value)
-
-            dummyText = dummyText.map((text) => {
-                return `${text}`
-            }).join("")
-    
-            document.querySelector('.lorem-text').innerHTML = dummyText
-
-
-}
-else{
+   if(isNaN(value) || value < 0 || value > 9){
     document.querySelector('.lorem-text').innerHTML = `<p class=result>${show}</p>`
-}
+   }else{
+        let dummyText = text.slice(0,value)
+
+        dummyText = dummyText.map((text) => {
+            return `${text}`
+        }).join("")
+
+        document.querySelector('.lorem-text').innerHTML = dummyText
+   }
+
+// if(isNaN(value) || value < 0 || value > 9 || value === 0){
+//     document.querySelector('.lorem-text').innerHTML = `<p class=result>Error(Negative number , Greater than 9 , Equall to 0)</p>`
+// }
+// else if(isNaN(value) || value > 0 || value < 10){
+//     let dummyText = text.slice(0,value)
+
+//             dummyText = dummyText.map((text) => {
+//                 return `${text}`
+//             }).join("")
+    
+//             document.querySelector('.lorem-text').innerHTML = dummyText
+
+
+// }
+// else{
+//     document.querySelector('.lorem-text').innerHTML = `<p class=result>${show}</p>`
+// }
 
 });
