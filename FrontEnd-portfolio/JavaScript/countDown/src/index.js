@@ -41,3 +41,13 @@ const sec = futureDate.getSeconds()
 
 giveaway.textContent = `giveaway ends on  ${weekdays[day]}, ${months[month]}, ${year},  ${hour}:${min}am`
 
+const futureTime = futureDate.getTime()
+console.log(futureTime)
+
+ const getRemainingTime  = () => {
+    const today = new Date().getTime()
+     const dT = futureTime - today
+     console.log(dt)
+ }
+  getRemainingTime()
+
