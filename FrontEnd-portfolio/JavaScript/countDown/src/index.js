@@ -29,23 +29,34 @@ const items = document.querySelectorAll('.deadline-format h4')
 const deadLine = document.querySelectorAll('.deadline')
 
 
-const futureDate = new Date(2025, 4 , 5, 2, 39, 58 )
+const futureDate = new Date(2025, 4 , 25, 2, 39, 58 )
 const year = futureDate.getFullYear()
 const day = futureDate.getDay()
 const month =  futureDate.getMonth()
 const hour = futureDate.getHours()
 const min = futureDate.getMinutes()
 const sec = futureDate.getSeconds()
+const date = futureDate.getDate()
 
 
-giveaway.textContent = `giveaway ends on  ${weekdays[day]}, ${months[month]}, ${year},  ${hour}:${min}am`
+giveaway.textContent = `giveaway ends on  ${weekdays[day]}, ${date} ${months[month]}, ${year},  ${hour}:${min}am`
 
 const futureTime = futureDate.getTime()
-console.log(futureTime)
+// console.log(futureTime)
 
  const getRemainingTime  = () => {
     const today = new Date().getTime()
-     const dT =  today - futureTime
+    
+    let dT;
+
+    if(futureDate.getDate() < 10){
+       dT =  today - futureTime
+    }else{
+      dT = futureTime - today
+    }
+    
+
+ 
 
      const aDay = 24 * 60 * 60 * 1000
      const anHour = 60 * 60 * 1000
@@ -79,10 +90,14 @@ console.log(futureTime)
       items.forEach((item , index) => {
                item.innerHTML = format(myDateArray[index])
       })
-      
-        
-    
+
+      if(dT < 0){
+        clearInterval(countDown)
+        deadLine.innerHTML = `<h4 class="expired">sorry, this giveaway has expired!</h4>`;
+      }
            
  }
+
+ const countDown = setInterval( getRemainingTime , 1000)
   getRemainingTime()
 
