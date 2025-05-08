@@ -15,12 +15,9 @@
     width: 800px;
     height: 100%;
     margin: 10rem;
-    border: 2px solid pink;
+    border: 2px solid #000;
     border-radius: 10px;
-    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
-      rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
-      rgba(240, 46, 170, 0.05) 0px 25px;
-    /* overflow: scroll; */
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   }
   .task-input {
     margin-top: 2rem;
@@ -29,7 +26,7 @@
     width: 400px;
     height: 45px;
     border-radius: 12px;
-    border: 1px solid lightcoral;
+    border: 1px solid #000;
     font-size: 18px;
     outline: none;
     padding: 15px;
@@ -39,7 +36,7 @@
     width: 150px;
     height: 45px;
     border-radius: 10px;
-    background: purple;
+    background: #000;
     color: #f2f2f2;
     font-size: 20px;
     outline: none;
@@ -50,7 +47,7 @@
       width: 150px;
       height: 45px;
       border-radius: 10px;
-      background: purple;
+      background: #000;
       color: #f2f2f2;
       font-size: 20px;
       outline: none;
@@ -69,7 +66,7 @@
     padding: 20px;
   }
   .task-content {
-    border: 2px solid palevioletred;
+    border: 2px solid #000;
     height: 55px;
     border-radius: 20px;
     display: flex;
