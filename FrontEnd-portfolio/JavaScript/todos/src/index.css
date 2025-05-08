@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .container {
+    width: 800px;
+    height: 100%;
+    margin: 10rem;
+    border: 2px solid pink;
+    border-radius: 10px;
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+      rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+      rgba(240, 46, 170, 0.05) 0px 25px;
+    /* overflow: scroll; */
+  }
+  .task-input {
+    margin-top: 2rem;
+  }
+  .input {
+    width: 400px;
+    height: 45px;
+    border-radius: 12px;
+    border: 1px solid lightcoral;
+    font-size: 18px;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 3rem;
+  }
+  .Add-task {
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    background: purple;
+    color: #f2f2f2;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  .del-task, .edit-task {
+      width: 150px;
+      height: 45px;
+      border-radius: 10px;
+      background: purple;
+      color: #f2f2f2;
+      font-size: 20px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+  h2{
+      display: flex;
+      font-size: 17px;
+      padding: 20px;
+  }
+  .tasks {
+    margin-top: 4rem;
+  }
+  .task-el {
+    padding: 20px;
+  }
+  .task-content {
+    border: 2px solid palevioletred;
+    height: 55px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .input-edit{
+      height: 35px;
+      border: none;
+      padding: 10px;
+      border-radius: 20px;
+      font-size: 18px;
+      outline: none;
+  }
+  .actions{
+      display: flex;
+      gap: 1rem;
+  
+  }
+  
+  @media(max-width:900px){
+      .del-task,.edit-task {
+          width: 70px;
+          height: 45px;
+        }
+        .input {
+          width: 300px;
+          height: 45px;
+      }
+  }
