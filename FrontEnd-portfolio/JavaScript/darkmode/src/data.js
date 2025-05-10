@@ -23,7 +23,7 @@ const articles = [
     {
       id: 3,
       title: 'Nvidia modifies H20 chip for China to overcome US export controls, sources say',
-      date: new Date(2018, 7, 11),
+      date: new Date(2025, 4, 10),
       length: 5,
       snippet: `By Liam Mo and Brenda Goh
 
@@ -37,7 +37,7 @@ const articles = [
       In the mangroves with Florida’s poet of excess and grift
       
       By Amy Weiss-Meyer`,
-      date: new Date(2015, 5, 4),
+      date: new Date(2025, 4, 10),
       length: 5,
       snippet: `Nothing about Carl Hiaasen’s outward appearance suggests eccentricity. I’ve seen him described as having the air of “an amiable dentist” or “a pleasant jeweler” or “a patrician country lawyer.” He is soft-spoken, courteous, and plainly dressed. The mischief is mostly detectable in his eyes, which he’ll widen to express disbelief or judgment, or cast sideways to invite a companion to join him on his wavelength, raising his brows for effect.`,
     },
