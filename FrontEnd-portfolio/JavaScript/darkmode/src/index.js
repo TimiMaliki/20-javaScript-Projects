@@ -6,9 +6,13 @@ toggleBtn.addEventListener('click', () => {
     if(document.documentElement.classList.contains('dark-theme')){
         document.documentElement.classList.toggle('dark-theme')
         toggleBtn.textContent = "Day"
-    }else{
+        console.log('true')
+    }
+    else{
         document.documentElement.classList.toggle('dark-theme')
         toggleBtn.textContent = "Night"
+
+        console.log('false')
     }
 });
 

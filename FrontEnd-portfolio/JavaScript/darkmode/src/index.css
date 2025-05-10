@@ -78,7 +78,7 @@ Global Styles
   }
   
   .post h2 {
-    color: var(--clr-primary);
+    color: red;
     text-transform: capitalize;
     letter-spacing: 2px;
     font-size: 1.75rem;
