@@ -6,13 +6,15 @@ toggleBtn.addEventListener('click', () => {
     if(document.documentElement.classList.contains('dark-theme')){
         document.documentElement.classList.toggle('dark-theme')
         toggleBtn.textContent = "Day"
-        console.log('true')
+         //false it doesnt have the class but when it those it becomes true
+        // console.log('true')
+       
     }
     else{
         document.documentElement.classList.toggle('dark-theme')
         toggleBtn.textContent = "Night"
-
-        console.log('false')
+            // when if() finds out it does have the class it then goes to else and finds out its true and when switches back to if() becoming false
+        // console.log('false')
     }
 });
 
