@@ -2,7 +2,14 @@ const toggleBtn = document.querySelector('.btn');
 const articlesContainer = document.querySelector('.articles');
 
 toggleBtn.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark-theme');
+    // document.documentElement.classList.toggle('dark-theme')
+    if(document.documentElement.classList.contains('dark-theme')){
+        document.documentElement.classList.toggle('dark-theme')
+        toggleBtn.textContent = "Day"
+    }else{
+        document.documentElement.classList.toggle('dark-theme')
+        toggleBtn.textContent = "Night"
+    }
 });
 
 const articlesData = articles
