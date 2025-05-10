@@ -55,8 +55,8 @@ Global Styles
     letter-spacing: 2px;
   }
   .btn {
-    background: var(--clr-primary);
-    color: var(--clr-bcg);
+    background: red;
+    color: #fff;
     padding: 0.25rem 0.5rem;
     border-radius: 5px;
     border-color: transparent;
