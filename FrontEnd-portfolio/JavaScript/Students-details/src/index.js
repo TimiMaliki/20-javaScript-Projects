@@ -1,42 +1,38 @@
-const form = document.getElementById('studentForm')
-const  age = document.getElementById('age')
-const nameOfStudent = document.getElementById('name')
-const roll = document.getElementById('roll')
-const studentDom = document.querySelector('.students')
+const form = document.getElementById("studentForm");
+const age = document.getElementById("age");
+const nameOfStudent = document.getElementById("name");
+const roll = document.getElementById("roll");
+const studentDom = document.querySelector(".students");
 
-const students = [{
-   nameOfStudent : "yusuf",
-    age : 23 ,
-    roll : 4
-}]
- 
-const displayRegisteredStudents = ({nameOfStudent , age , roll}) =>{
-    const displayInnerHtml = `
+const students = [];
+
+const displayRegisteredStudents = (nameOfStudent, age, roll) => {
+  const displayInnerHtml = `
     <ul class="list-items">
-    <li class="items">${nameOfStudent.value}</li>
-    <li class="items">${age.value}</li>
-    <li class="items">${roll.value}</li>
+    <li class="items">${nameOfStudent}</li>
+    <li class="items">${age}</li>
+    <li class="items">${roll}</li>
   </ul>
-    `
-    studentDom.innerHTML = displayInnerHtml
-}
+    `;
+  studentDom.innerHTML = displayInnerHtml;
+};
 
-const addStudents = ({nameOfStudent , age ,roll})=>{
+const addStudents = (nameOfStudent, age, roll ) => {
+  students.push({ nameOfStudent, age, roll });
+  return (nameOfStudent, age, roll);
+};
 
-    const addUp = {
-        nameOfStudent,age,roll
-    }
+students.forEach(displayRegisteredStudents);
 
-    students.push(addUp)
-}
+console.log(students);
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const addNewStudents = addStudents(
+    nameOfStudent.value,
+    age.value,
+    roll.value
+  );
 
-students.forEach(displayRegisteredStudents)
-
-console.log(students)
-
-form.addEventListener('submit' , (e)=>{
-  e.preventDefault()
- 
-
-})
+  displayRegisteredStudents(addNewStudents);
+});
