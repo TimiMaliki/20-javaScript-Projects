@@ -46,15 +46,16 @@
   
   #studentForm button {
     outline: none;
-    background-color: #6495ed;
+    background-color: #000;
     color: white;
     border: 5px solid transparent;
     cursor: pointer;
   }
   
   #studentForm input {
-    border: 3px solid #6495ed;
+    border: none;
     outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
   
   #studentForm input:focus {
@@ -70,10 +71,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid gray;
-    background-color: #ebebeb;
+    border: 2px solid none;
+    background-color: #ffff;
     color: #2f2f2f;
-    border-radius: 15px;
+    border-radius: 4px;
+    margin-top: 0.24rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
   
   .students div {
@@ -82,7 +85,7 @@
 
   .list-items{
     list-style: none;
-    /* border: 2px solid red; */
+    margin-top: 0.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,6 +95,7 @@
      font-size: 21px;
      font-weight: 500;
      color: green;
+     padding: 15px;
   }
   
   .students div * {

@@ -7,26 +7,6 @@ const studentDom = document.querySelector(".students");
 const students = [];
 
 const displayRegisteredStudents = ({person, age, roll}) => {
-
-
-// const displayInnerHtml  = `
-//      <ul class ="list-items">
-
-//      <li class= "items">
-//        ${person}
-//      </li>
-//      <li class= "items">
-//        ${age}
-//      </li>
-//      <li class= "items">
-//         ${roll}
-//      </li>
-
-//      </ul>
-// `
-
-// studentDom.innerHTML = displayInnerHtml
-
   const container = document.createElement("ul")
   container.classList.add('list-items')
   const studentName= document.createElement("li")
