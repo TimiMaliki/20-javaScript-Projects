@@ -2,15 +2,18 @@ const form = document.getElementById('studentForm')
 const  age = document.getElementById('age')
 const nameOfStudent = document.getElementById('name')
 const roll = document.getElementById('roll')
+const studentDom = document.querySelector('.students')
 
-form.addEventListener('submit' , (e) =>{
-    e.preventDefault()
-    //  console.log('One million two million')
+const students = []
 
-     const ageValue = age.value
-     const nameValue = nameOfStudent.value
-     const rollValue = roll.value
-     document.querySelector('.students').textContent = `${nameValue} , ${ageValue} , ${rollValue}`
-     console.log(ageValue,nameValue,rollValue)
+const displayRegisteredStudents = ({nameOfStudent , age , roll}) =>{
+    const displayInnerHtml = `
+    <ul class="list-items">
+    <li class="items">${nameOfStudent}</li>
+    <li class="items">${age}</li>
+    <li class="items">${roll}</li>
+  </ul>
+    `
 
-})
+
+}

@@ -78,8 +78,20 @@
   
   .students div {
     width: 100%;
-    padding: 10px;
-    text-align: center;
+  }
+
+  .list-items{
+    list-style: none;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  .items{
+     font-size: 21px;
+     font-weight: 500;
+     color: green;
   }
   
   .students div * {
