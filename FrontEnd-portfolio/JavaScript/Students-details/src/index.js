@@ -18,7 +18,7 @@ const displayRegisteredStudents = ({person, age, roll}) => {
   studentRoll.classList.add('items')
 
    studentName.innerText = person
-   studentAge.innerText = age
+   studentAge.innerText = age <= 0 ? "" : "error"
    studentRoll.innerText = roll
 
    container.append(studentName,studentAge,studentRoll)
@@ -30,9 +30,9 @@ const addStudents = (person, age, roll ) => {
   return {person, age, roll};
 };
 
-students.forEach(displayRegisteredStudents);
 
-console.log(students);
+
+// console.log(students);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
