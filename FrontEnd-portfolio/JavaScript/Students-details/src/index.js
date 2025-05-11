@@ -10,7 +10,7 @@ form.addEventListener('submit' , (e) =>{
      const ageValue = age.value
      const nameValue = nameOfStudent.value
      const rollValue = roll.value
-     document.querySelector('.students').innerHTML = `${nameOfStudent} , ${nameValue} , ${rollValue}`
+     document.querySelector('.students').textContent = `${nameValue} , ${ageValue} , ${rollValue}`
      console.log(ageValue,nameValue,rollValue)
 
 })
