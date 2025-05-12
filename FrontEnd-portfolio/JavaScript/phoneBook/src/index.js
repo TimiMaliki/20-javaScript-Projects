@@ -85,6 +85,7 @@ form.addEventListener("submit", (e) => {
       alertInfo.textContent = "Success!"
   
       successAlert(alertInfo)
+      timeOutModal()
   }
   
  
@@ -103,12 +104,18 @@ const dangerAlert = (alertInfo) => {
     setTimeout(() => {
         alertInfo.textContent = ""
         alertInfo.classList.remove('danger')
-       }, 1000);
+       }, 2000);
 }
 
 const successAlert = (alertInfo) => {
     setTimeout(() => {
         alertInfo.textContent = ""
         alertInfo.classList.remove('success')
+       }, 2000)
+}
+
+const timeOutModal = () =>{
+    setTimeout(() => {
+        contactContainer.classList.remove("open-modal"); 
        }, 1000)
 }
