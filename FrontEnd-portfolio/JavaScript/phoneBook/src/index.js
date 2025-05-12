@@ -18,11 +18,61 @@ const contactNumber = document.getElementById("number");
 const nameOfContact = document.getElementById("name");
 const addressOfContact = document.getElementById("address");
 const secondLine = document.getElementById("secondline");
-const studentDom = document.querySelector(".contacts");
+const contactWrapper = document.querySelector(".contact-container");
+const contactDom = document.querySelector(".contacts");
 
 const contact = JSON.parse(localStorage.getItem("contact")) || [];
 
 // CREATING CONTACTS
+
+
+const createContact = ({ person, address, line, otherLine }) => {
+    const contact = document.createElement("div")
+    contact.classList.add("contacts")
+
+    const contact__Info = document.createElement("div")
+    contact__Info.classList.add("flex")
+
+    const info = document.createElement("div")
+    info.classList.add("flex")
+
+    const user__Name = document.createElement("div")
+    user__Name.classList.add("user")
+
+    const nameH3 = document.createElement("h3")
+    const nameInput = document.createElement("input")
+    nameInput.classList.add("inputEdit")
+
+
+    const user__Address = document.createElement("div")
+    user__Address.classList.add("address")
+
+    const addressH3 = document.createElement("h3")
+    const addressInput = document.createElement("input")
+    address.classList.add("inputEdit")
+
+
+    const user__MainLine = document.createElement("div")
+    user__MainLine.classList.add("mainLine")
+
+    const mainLineH3 = document.createElement("h3")
+    const mainLineInput = document.createElement("input")
+     mainLineInput.classList.add("inputEdit")
+
+
+
+     const alt__Line = document.createElement("div")
+     user__MainLine.classList.add("mainLine")
+ 
+     const altLineH3 = document.createElement("h3")
+     const altLineInput = document.createElement("input")
+      mainLineInput.classList.add("inputEdit")
+
+
+       
+    contactDom.appendChild(container);
+  };
+  
 
 const addContact = (person, address, line, otherLine) => {
   contact.push({ person, address, line, otherLine });
