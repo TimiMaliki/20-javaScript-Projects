@@ -21,24 +21,63 @@
           <h2>Create new Contact</h2>
         </div>
         <div class="alert-container">
-            <div class="alert-text"><h3 class="alert"></h3></div>
+          <div class="alert-text"><h3 class="alert"></h3></div>
         </div>
-        <div class="contacts">
-            
+        <div class="contact-container">
+          <div class="contacts">
+            <div class="contact__Name flex">
+              <div class="info flex">
+                <div class="user">
+                  <h3>Name</h3>
+                  <h3>TimiMaliki</h3>
+                </div>
+
+                <div class="user__address">
+                  <h3>Address</h3>
+                  <h3>08035401200</h3>
+                </div>
+
+                <div class="user__mainLine">
+                  <h3>Number</h3>
+                  <h3>08035401200</h3>
+                </div>
+                
+                <div class="user__altLine">
+                  <h3>Other Line</h3>
+                  <h3>08035401200</h3>
+                </div>
+              </div>
+              <i class="fas fa-user-edit"></i>
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <!-- modal -->
     <div class="modal-overlay">
       <div class="modal-container">
-
         <form id="contactForm">
-            <input type="text" placeholder="Contact name" name="name" id="name"  />
-            <input type="text" placeholder="Contact address" name="address" id="address"  />
-            <input type="number" placeholder="Contact number" name="number"  id="number"  />
-            <input type="number" placeholder="Contact secondline" name="secondline"  id="secondline"  />
-            <button>Add Contact</button>
-          </form>
+          <input type="text" placeholder="Contact name" name="name" id="name" />
+          <input
+            type="text"
+            placeholder="Contact address"
+            name="address"
+            id="address"
+          />
+          <input
+            type="number"
+            placeholder="Contact number"
+            name="number"
+            id="number"
+          />
+          <input
+            type="number"
+            placeholder="Contact secondline"
+            name="secondline"
+            id="secondline"
+          />
+          <button>Add Contact</button>
+        </form>
         <button class="close-btn"><i class="fas fa-times"></i></button>
       </div>
     </div>
