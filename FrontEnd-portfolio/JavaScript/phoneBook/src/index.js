@@ -3,13 +3,14 @@
 const modalBtn = document.querySelector(".modalBtn");
 const contactContainer = document.querySelector(".modal-overlay");
 const closeContactBtn = document.querySelector(".close-btn");
+const  alertInfo = document.querySelector('.alert-text h3')
 
 modalBtn.addEventListener("click", () => {
   contactContainer.classList.toggle("open-modal");
 });
 
 closeContactBtn.addEventListener("click", () => {
-  contactContainer.classList.remove("open-modal");
+ 
 });
 
 // Adding Contact
@@ -62,18 +63,56 @@ contact.forEach(createContact);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  
+  if(!nameOfContact.value ||  addressOfContact.value ||  contactNumber.value ||  secondLine.value){
+    alertInfo.classList.add('danger')
+        alertInfo.classList.remove('success')
+        alertInfo.textContent = "Input cannot be empty , please provide an input, Thanks!"
+        dangerAlert(alertInfo)
+  }
+    createContact(
+        addContact(
+          nameOfContact.value,
+          addressOfContact.value,
+          contactNumber.value,
+          secondLine.value,
+        )
+      );
 
-  createContact(
-    addContact(
-      nameOfContact.value,
-      addressOfContact.value,
-      contactNumber.value,
-      secondLine.value,
-    )
-  );
-
+      alertInfo.classList.remove('danger')
+      alertInfo.classList.add('success')
+      alertInfo.textContent = "Success!"
+  
+      successAlert(alertInfo)
+  
+      timeOutModal()
+ 
+ 
   nameOfContact.value = "";
   addressOfContact.value = "";
   contactNumber.value = ""
   secondLine.value = "";
 });
+
+
+
+const dangerAlert = (alertInfo) => {
+    setTimeout(() => {
+        alertInfo.textContent = ""
+        alertInfo.classList.remove('danger')
+       }, 2000);
+}
+
+const successAlert = (alertInfo) => {
+    setTimeout(() => {
+        alertInfo.textContent = ""
+        alertInfo.classList.remove('success')
+       }, 2000)
+}
+
+
+const timeOutModal = () =>{
+    setTimeout(() =>{
+        contactContainer.classList.remove("open-modal");   
+    },1000)
+}
