@@ -3,7 +3,7 @@
 const modalBtn = document.querySelector(".modalBtn");
 const contactContainer = document.querySelector(".modal-overlay");
 const closeContactBtn = document.querySelector(".close-btn");
-const  alertInfo = document.querySelector('.alert-text h3')
+const alertInfo = document.querySelector(".alert-text h3");
 
 modalBtn.addEventListener("click", () => {
   contactContainer.classList.toggle("open-modal");
@@ -25,81 +25,80 @@ const contact = JSON.parse(localStorage.getItem("contact")) || [];
 
 // CREATING CONTACTS
 
-
 const createContact = ({ person, address, line, otherLine }) => {
-    const contact = document.createElement("div")
-    contact.classList.add("contacts")
+  const contact = document.createElement("div");
+  contact.classList.add("contacts");
 
-    const contact__Info = document.createElement("div")
-    contact__Info.classList.add("flex")
+  const contact__Info = document.createElement("div");
+  contact__Info.classList.add("flex");
 
+  const info = document.createElement("div");
+  info.classList.add("flex");
 
-    const info = document.createElement("div")
-    info.classList.add("flex")
+  const user__Name = document.createElement("div");
+  user__Name.classList.add("user");
 
-    const user__Name = document.createElement("div")
-    user__Name.classList.add("user")
+  const nameH3 = document.createElement("h3");
+  nameH3.innerText = "Name";
+  const nameInput = document.createElement("input");
+  nameInput.setAttribute = ("readonly", "readonly");
+  nameInput.classList.add("inputEdit");
+  nameInput.placeholder = person;
 
-    const nameH3 = document.createElement("h3")
-    nameH3.innerText = "Name"
-    const nameInput = document.createElement("input")
-    nameInput.classList.add("inputEdit")
-    nameInput.placeholder = person
+  user__Name.append(nameH3, nameInput);
 
-    user__Name.append(nameH3,nameInput)
+  const user__Address = document.createElement("div");
+  user__Address.classList.add("address");
 
-    const user__Address = document.createElement("div")
-    user__Address.classList.add("address")
+  const addressH3 = document.createElement("h3");
+  addressH3.innerText = "Address";
+  const addressInput = document.createElement("input");
+  addressInput.setAttribute = ("readonly", "readonly");
+  addressInput.classList.add("inputEdit");
+  addressInput.placeholder = address;
 
-    const addressH3 = document.createElement("h3")
-    addressH3.innerText = "Address"
-    const addressInput = document.createElement("input")
-    addressInput.classList.add("inputEdit")
-    addressInput.placeholder = address
+  user__Address.append(addressH3, addressInput);
 
-    user__Address.append(addressH3,addressInput)
+  const user__MainLine = document.createElement("div");
+  user__MainLine.classList.add("mainLine");
 
-    const user__MainLine = document.createElement("div")
-    user__MainLine.classList.add("mainLine")
+  const mainLineH3 = document.createElement("h3");
+  mainLineH3.innerText = "Phone Number";
+  const mainLineInput = document.createElement("input");
+  mainLineInput.setAttribute = ("readonly", "readonly");
+  mainLineInput.classList.add("inputEdit");
+  mainLineInput.placeholder = line;
 
-   
+  user__MainLine.append(mainLineH3, mainLineInput);
 
-    const mainLineH3 = document.createElement("h3")
-    mainLineH3.innerText = "Phone Number"
-    const mainLineInput = document.createElement("input")
-     mainLineInput.classList.add("inputEdit")
-     mainLineInput.placeholder = line
+  const alt__Line = document.createElement("div");
+  user__MainLine.classList.add("mainLine");
 
-     user__MainLine.append(mainLineH3,mainLineInput)
+  const altLineH3 = document.createElement("h3");
+  altLineH3.innerText = "Other Line";
+  const altLineInput = document.createElement("input");
+  altLineInput.setAttribute = ("readonly", "readonly");
+  altLineInput.classList.add("inputEdit");
+  altLineInput.placeholder = otherLine;
 
-     const alt__Line = document.createElement("div")
-     user__MainLine.classList.add("mainLine")
- 
-     const altLineH3 = document.createElement("h3")
-     altLineH3.innerText = "Other Line"
-     const altLineInput = document.createElement("input")
-      altLineInput.classList.add("inputEdit")
-      altLineInput.placeholder = otherLine
+  alt__Line.append(altLineH3, altLineInput);
+  info.append(user__Name, user__Address, user__MainLine, alt__Line);
 
-        alt__Line.append(altLineH3,altLineInput)
-       info.append(user__Name,user__Address,user__MainLine,alt__Line)
+  const userEdit = document.createElement("i");
+  userEdit.classList.add("fas");
+  userEdit.classList.add("fa-user-edit");
+  userEdit.classList.add("editBtn");
 
-       const userEdit = document.createElement("i")
-       userEdit.classList.add("fas")
-       userEdit.classList.add("fa-user-edit")
-       userEdit.classList.add("editBtn")
+  contact__Info.append(info, userEdit);
 
-       contact__Info.append(info,userEdit)
+  contact.appendChild(contact__Info);
 
-    contact.appendChild(contact__Info);
-    
-    contactWrapper.appendChild(contact)
-  };
-  
+  contactWrapper.appendChild(contact);
+};
 
 const addContact = (person, address, line, otherLine) => {
   contact.push({ person, address, line, otherLine });
-  localStorage.setItem("contact" , JSON.stringify(contact))
+  localStorage.setItem("contact", JSON.stringify(contact));
   return { person, address, line, otherLine };
 };
 
@@ -107,87 +106,69 @@ contact.forEach(createContact);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  
-  if(!nameOfContact.value ||  addressOfContact.value ||  contactNumber.value ||  secondLine.value){
-    alertInfo.classList.add('danger')
-        alertInfo.classList.remove('success')
-        alertInfo.textContent = "Input cannot be empty , please provide an input, Thanks!"
-        dangerAlert(alertInfo)
+
+  if (
+    !nameOfContact.value ||
+    addressOfContact.value ||
+    contactNumber.value ||
+    secondLine.value
+  ) {
+    alertInfo.classList.add("danger");
+    alertInfo.classList.remove("success");
+    alertInfo.textContent =
+      "Input cannot be empty , please provide an input, Thanks!";
+    dangerAlert(alertInfo);
   }
-  if(nameOfContact.value ||  addressOfContact.value ||  contactNumber.value ||  secondLine.value){
+  if (
+    nameOfContact.value ||
+    addressOfContact.value ||
+    contactNumber.value ||
+    secondLine.value
+  ) {
     createContact(
-        addContact(
-          nameOfContact.value,
-          addressOfContact.value,
-          contactNumber.value,
-          secondLine.value,
-        )
-      );
+      addContact(
+        nameOfContact.value,
+        addressOfContact.value,
+        contactNumber.value,
+        secondLine.value
+      )
+    );
 
-      alertInfo.classList.remove('danger')
-      alertInfo.classList.add('success')
-      alertInfo.textContent = "Success!"
-  
-      successAlert(alertInfo)
-      timeOutModal()
+    alertInfo.classList.remove("danger");
+    alertInfo.classList.add("success");
+    alertInfo.textContent = "Success!";
+
+    successAlert(alertInfo);
+    timeOutModal();
   }
-  
- 
 
- 
- 
   nameOfContact.value = "";
   addressOfContact.value = "";
-  contactNumber.value = ""
+  contactNumber.value = "";
   secondLine.value = "";
 });
 
-
-
 const dangerAlert = (alertInfo) => {
-    setTimeout(() => {
-        alertInfo.textContent = ""
-        alertInfo.classList.remove('danger')
-       }, 3000);
-}
+  setTimeout(() => {
+    alertInfo.textContent = "";
+    alertInfo.classList.remove("danger");
+  }, 3000);
+};
 
 const successAlert = (alertInfo) => {
-    setTimeout(() => {
-        alertInfo.textContent = ""
-        alertInfo.classList.remove('success')
-       }, 3000)
-}
+  setTimeout(() => {
+    alertInfo.textContent = "";
+    alertInfo.classList.remove("success");
+  }, 3000);
+};
 
-const timeOutModal = () =>{
-    setTimeout(() => {
-        contactContainer.classList.remove("open-modal"); 
-       }, 1000)
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const timeOutModal = () => {
+  setTimeout(() => {
+    contactContainer.classList.remove("open-modal");
+  }, 1000);
+};
 
 // Adding Contact
-
-
 
 // const createContact = ({ person, address, line, otherLine }) => {
 //   const container = document.createElement("ul");
@@ -214,6 +195,6 @@ const timeOutModal = () =>{
 //     personNumber,
 //     contactSecondLine
 //   );
-     
+
 //   studentDom.appendChild(container);
 // };

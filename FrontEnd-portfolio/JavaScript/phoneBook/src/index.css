@@ -410,9 +410,11 @@ main {
   background-color: red;
   color: #fff;
   font-weight: bolder;
+  padding: 15px;
 }
 .success {
   background-color: green;
   color: #fff;
   font-weight: bolder;
+  padding: 15px;
 }
