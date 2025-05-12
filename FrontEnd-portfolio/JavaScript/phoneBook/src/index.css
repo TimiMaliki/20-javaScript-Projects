@@ -337,7 +337,10 @@ main {
 .inputEdit::placeholder{
     font-size: 0.95rem;
 }
-.editBtn{
+.icons{
+    display: grid;
+}
+.editBtn,.saveBtn{
     font-size: 25px;
 }
 #contactForm input:focus {
