@@ -104,14 +104,14 @@ const dangerAlert = (alertInfo) => {
     setTimeout(() => {
         alertInfo.textContent = ""
         alertInfo.classList.remove('danger')
-       }, 2000);
+       }, 3000);
 }
 
 const successAlert = (alertInfo) => {
     setTimeout(() => {
         alertInfo.textContent = ""
         alertInfo.classList.remove('success')
-       }, 2000)
+       }, 3000)
 }
 
 const timeOutModal = () =>{
