@@ -33,6 +33,7 @@ const createContact = ({ person, address, line, otherLine }) => {
     const contact__Info = document.createElement("div")
     contact__Info.classList.add("flex")
 
+
     const info = document.createElement("div")
     info.classList.add("flex")
 
@@ -40,37 +41,59 @@ const createContact = ({ person, address, line, otherLine }) => {
     user__Name.classList.add("user")
 
     const nameH3 = document.createElement("h3")
+    nameH3.innerText = "Name"
     const nameInput = document.createElement("input")
     nameInput.classList.add("inputEdit")
+    nameInput.placeholder = person
 
+    user__Name.append(nameH3,nameInput)
 
     const user__Address = document.createElement("div")
     user__Address.classList.add("address")
 
     const addressH3 = document.createElement("h3")
+    addressH3.innerText = "Address"
     const addressInput = document.createElement("input")
-    address.classList.add("inputEdit")
+    addressInput.classList.add("inputEdit")
+    addressInput.placeholder = address
 
+    user__Address.append(addressH3,addressInput)
 
     const user__MainLine = document.createElement("div")
     user__MainLine.classList.add("mainLine")
 
+   
+
     const mainLineH3 = document.createElement("h3")
+    mainLineH3.innerText = "Phone Number"
     const mainLineInput = document.createElement("input")
      mainLineInput.classList.add("inputEdit")
+     mainLineInput.placeholder = line
 
-
+     user__MainLine.append(mainLineH3,mainLineInput)
 
      const alt__Line = document.createElement("div")
      user__MainLine.classList.add("mainLine")
  
      const altLineH3 = document.createElement("h3")
+     altLineH3.innerText = "Other Line"
      const altLineInput = document.createElement("input")
-      mainLineInput.classList.add("inputEdit")
+      altLineInput.classList.add("inputEdit")
+      altLineInput.placeholder = otherLine
 
+        alt__Line.append(altLineH3,altLineInput)
+       info.append(user__Name,user__Address,user__MainLine,alt__Line)
 
-       
-    contactDom.appendChild(container);
+       const userEdit = document.createElement("i")
+       userEdit.classList.add("fas")
+       userEdit.classList.add("fa-user-edit")
+       userEdit.classList.add("editBtn")
+
+       contact__Info.append(info,userEdit)
+
+    contact.appendChild(contact__Info);
+    
+    contactWrapper.appendChild(contact)
   };
   
 

@@ -335,7 +335,7 @@ main {
     padding: 15px;
 }
 .inputEdit::placeholder{
-     font-size: 13px;
+    font-size: 0.95rem;
 }
 .editBtn{
     font-size: 25px;
