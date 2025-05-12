@@ -84,9 +84,6 @@ const createContact = ({ person, address, line, otherLine }) => {
   alt__Line.append(altLineH3, altLineInput);
   info.append(user__Name, user__Address, user__MainLine, alt__Line);
 
-  const icons = document.createElement('div')
-icons.classList.add("icons")
-
   const userEdit = document.createElement("i");
   userEdit.classList.add("fas");
   userEdit.classList.add("fa-user-edit");
@@ -97,32 +94,29 @@ icons.classList.add("icons")
   saveEdit.classList.add("fa-save");
   saveEdit.classList.add("saveBtn");
 
-   icons.append(userEdit , saveEdit)
-
-  contact__Info.append(info, icons );
+  contact__Info.append(info, userEdit, saveEdit);
 
   contact.appendChild(contact__Info);
 
   contactWrapper.appendChild(contact);
 
-
-  userEdit.addEventListener("click" , ()=>{
-    if(userEdit.classList.contains("editBtn")){
-        nameInput.removeAttribute("readonly", "readonly");
-        addressInput.removeAttribute("readonly", "readonly");
-        mainLineInput.removeAttribute("readonly", "readonly");
-        altLineInput.removeAttribute("readonly", "readonly");
+  userEdit.addEventListener("click", () => {
+    if (userEdit.classList.contains("editBtn")) {
+      nameInput.removeAttribute("readonly", "readonly");
+      addressInput.removeAttribute("readonly", "readonly");
+      mainLineInput.removeAttribute("readonly", "readonly");
+      altLineInput.removeAttribute("readonly", "readonly");
     }
-  })
+  });
 
-  saveEdit.addEventListener("click" , ()=>{
-          if(saveEdit.classList.contains("saveBtn")){
-            nameInput.setAttribute("readonly", "readonly");
-                addressInput.setAttribute("readonly", "readonly");
-                mainLineInput.setAttribute("readonly", "readonly");
-                altLineInput.setAttribute("readonly", "readonly");
-          }
-  })
+  saveEdit.addEventListener("click", () => {
+    if (saveEdit.classList.contains("saveBtn")) {
+      nameInput.setAttribute("readonly", "readonly");
+      addressInput.setAttribute("readonly", "readonly");
+      mainLineInput.setAttribute("readonly", "readonly");
+      altLineInput.setAttribute("readonly", "readonly");
+    }
+  });
 };
 
 const addContact = (person, address, line, otherLine) => {
