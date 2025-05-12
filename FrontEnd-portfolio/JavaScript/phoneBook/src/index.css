@@ -225,6 +225,7 @@ i{
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(73, 166, 23, 0.9);
   display: grid;
   place-items: center;
   transition: var(--transition);
@@ -262,3 +263,110 @@ i{
   color: var(--clr-red-light);
   transform: scale(1.3);
 }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  main {
+    width: 80%;
+    margin: 15px auto 0;
+  }
+  
+  #studentForm input[name="name"] {
+    grid-area: name;
+  }
+  
+  #studentForm input[name="age"] {
+    grid-area: age;
+  }
+  
+  #studentForm input[name="roll"] {
+    grid-area: roll;
+  }
+  
+  #studentForm button {
+    grid-area: button;
+  }
+  
+  #studentForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "name name"
+      "age roll"
+      "button button";
+  }
+  
+  #studentForm * {
+    margin: 7px;
+    padding: 7px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  #studentForm button {
+    outline: none;
+    background-color: #000;
+    color: white;
+    border: 5px solid transparent;
+    cursor: pointer;
+  }
+  
+  #studentForm input {
+    border: none;
+    outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  
+  #studentForm input:focus {
+    border: 3px solid #367bfa;
+  }
+  
+  #studentForm button:active {
+    border-color: #367bfa;
+  }
+  
+  .contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid none;
+    background-color: #ffff;
+    color: #2f2f2f;
+    border-radius: 4px;
+    margin-top: 4.24rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  
+  .contacts div {
+    width: 100%;
+  }
+
+  .list-items{
+    list-style: none;
+    margin-top: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  .items{
+     font-size: 21px;
+     font-weight: 500;
+     color: green;
+     padding: 15px;
+  }
+  
+  .contacts div * {
+    margin: 5px;
+  }
+
