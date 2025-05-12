@@ -327,7 +327,19 @@ main {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-
+.inputEdit{
+    width: 100%;
+    border: 2px solid #000;
+    height: auto;
+    border-radius: 25px;
+    padding: 15px;
+}
+.inputEdit::placeholder{
+     font-size: 13px;
+}
+.editBtn{
+    font-size: 25px;
+}
 #contactForm input:focus {
   border: 3px solid #367bfa;
 }
