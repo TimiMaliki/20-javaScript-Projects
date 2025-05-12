@@ -10,7 +10,7 @@ modalBtn.addEventListener("click", () => {
 });
 
 closeContactBtn.addEventListener("click", () => {
- 
+  contactContainer.classList.remove("open-modal");
 });
 
 // Adding Contact
@@ -70,6 +70,7 @@ form.addEventListener("submit", (e) => {
         alertInfo.textContent = "Input cannot be empty , please provide an input, Thanks!"
         dangerAlert(alertInfo)
   }
+  if(nameOfContact.value ||  addressOfContact.value ||  contactNumber.value ||  secondLine.value){
     createContact(
         addContact(
           nameOfContact.value,
@@ -84,8 +85,10 @@ form.addEventListener("submit", (e) => {
       alertInfo.textContent = "Success!"
   
       successAlert(alertInfo)
+  }
   
-      timeOutModal()
+ 
+
  
  
   nameOfContact.value = "";
@@ -100,19 +103,12 @@ const dangerAlert = (alertInfo) => {
     setTimeout(() => {
         alertInfo.textContent = ""
         alertInfo.classList.remove('danger')
-       }, 2000);
+       }, 1000);
 }
 
 const successAlert = (alertInfo) => {
     setTimeout(() => {
         alertInfo.textContent = ""
         alertInfo.classList.remove('success')
-       }, 2000)
-}
-
-
-const timeOutModal = () =>{
-    setTimeout(() =>{
-        contactContainer.classList.remove("open-modal");   
-    },1000)
+       }, 1000)
 }
