@@ -281,6 +281,10 @@ i{
   #studentForm input[name="name"] {
     grid-area: name;
   }
+
+  #studentForm input[name="address"] {
+    grid-area: address;
+  }
   
   #studentForm input[name="age"] {
     grid-area: age;
@@ -299,7 +303,7 @@ i{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "name name"
+      "name address"
       "age roll"
       "button button";
   }
