@@ -37,8 +37,8 @@ const createContact = ({ person, address, line, otherLine }) => {
   personNumber.classList.add("items");
   contactSecondLine.classList.add("items");
 
-  contactName.innerHTML = "Name :"   + " " + person;
-  contactAddress.innerHTML = "Home Address :"   + " " +address;
+  contactName.innerHTML = `Name : ${person}`;
+  contactAddress.innerHTML =`Name : ${address}`;
   personNumber.innerHTML = `Phone Number : ${ line  >= 0 ? line : ""}`;
   contactSecondLine.innerHTML = ` Other line : ${otherLine >= 0 ? otherLine : ""}` ;
 
