@@ -94,7 +94,14 @@ const createContact = ({ person, address, line, otherLine }) => {
   saveEdit.classList.add("fa-save");
   saveEdit.classList.add("saveBtn");
 
-  contact__Info.append(info, userEdit, saveEdit);
+  const delBtn = document.createElement("i");
+  delBtn.classList.add("fas");
+  delBtn.classList.add("fa-user-times");
+  delBtn.classList.add("delBtn");
+
+ 
+
+  contact__Info.append(info, userEdit, saveEdit , delBtn);
 
   contact.appendChild(contact__Info);
 
@@ -117,6 +124,41 @@ const createContact = ({ person, address, line, otherLine }) => {
       altLineInput.setAttribute("readonly", "readonly");
     }
   });
+
+  delBtn.addEventListener("click", () => {
+
+    const del__container = document.querySelector(".delete-container")
+
+    del__container.classList.remove("del__hidden")
+    
+    const sure = document.querySelector(".sureOrNot")
+     sure.innerHTML = "Are you sure"
+
+    const yes = document.querySelector(".Yes")
+    const no = document.querySelector(".No")
+
+    const yesBtn = document.querySelector(".yesBtn")
+    const noBtn = document.querySelector(".noBtn")
+
+    yesBtn.addEventListener("click", ()=>{
+     
+         if(yes.classList.contains("Yes")){
+          contact.remove()
+          delTimeOut(del__container)
+         }
+        
+    })
+
+    noBtn.addEventListener("click", ()=>{
+      if(no.classList.contains("No")){
+        // del__container.classList.add("del__hidden")
+        delTimeOut(del__container)
+      }
+ })
+      
+
+      
+  })
 };
 
 const addContact = (person, address, line, otherLine) => {
@@ -178,6 +220,13 @@ const dangerAlert = (alertInfo) => {
   }, 3000);
 };
 
+const deleteAlert = (alertInfo) => {
+  setTimeout(() => {
+    alertInfo.textContent = "";
+    alertInfo.classList.remove("danger");
+  }, 3000);
+};
+
 const successAlert = (alertInfo) => {
   setTimeout(() => {
     alertInfo.textContent = "";
@@ -191,33 +240,8 @@ const timeOutModal = () => {
   }, 1000);
 };
 
-// Adding Contact
-
-// const createContact = ({ person, address, line, otherLine }) => {
-//   const container = document.createElement("ul");
-
-//   const contactName = document.createElement("li");
-//   const contactAddress = document.createElement("li");
-//   const personNumber = document.createElement("li");
-//   const contactSecondLine = document.createElement("li");
-
-//   container.classList.add("list-items");
-//   contactName.classList.add("items");
-//   contactAddress.classList.add("items");
-//   personNumber.classList.add("items");
-//   contactSecondLine.classList.add("items");
-
-//   contactName.innerHTML = `Name : ${person}`;
-//   contactAddress.innerHTML =`Name : ${address}`;
-//   personNumber.innerHTML = `Phone Number : ${ line  >= 0 ? line : ""}`;
-//   contactSecondLine.innerHTML = ` Other line : ${otherLine >= 0 ? otherLine : ""}` ;
-
-//   container.append(
-//     contactName,
-//     contactAddress,
-//     personNumber,
-//     contactSecondLine
-//   );
-
-//   studentDom.appendChild(container);
-// };
+const delTimeOut = (del__container) => {
+  setTimeout(() => {
+    del__container.classList.add("del__hidden")
+  }, 2000);
+}

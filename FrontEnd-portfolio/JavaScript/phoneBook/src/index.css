@@ -327,21 +327,32 @@ main {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-.inputEdit{
-    width: 100%;
-    border: 2px solid #000;
-    height: auto;
-    border-radius: 25px;
-    padding: 15px;
+.inputEdit {
+  width: 100%;
+  border: 2px solid #000;
+  height: auto;
+  border-radius: 25px;
+  padding: 15px;
 }
-.inputEdit::placeholder{
-    font-size: 0.95rem;
+.inputEdit::placeholder {
+  font-size: 0.95rem;
 }
-.icons{
-    display: grid;
+.icons {
+  display: grid;
 }
-.editBtn,.saveBtn{
-    font-size: 25px;
+.editBtn,
+.saveBtn,
+.delBtn {
+  font-size: 25px;
+}
+.editBtn:hover {
+  color: #367bfa;
+}
+.saveBtn:hover {
+  color: #367bfa;
+}
+.delBtn:hover {
+  color: #367bfa;
 }
 #contactForm input:focus {
   border: 3px solid #367bfa;
@@ -356,9 +367,10 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding: 50px;
 }
 .contacts {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -370,8 +382,8 @@ main {
   margin-top: 4.24rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
   border: 2px solid red;
+  padding: 0px  20px;
 }
 
 .contacts div {
@@ -398,17 +410,42 @@ main {
 .contacts div * {
   margin: 5px;
 }
-.flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.sureOrNot {
+  font-size: 18px;
+  color: #fff;
 }
 .alert-container {
   width: 100%;
   margin-top: 1rem;
 }
-
+.delete-container {
+  background: #49a6e9;
+  padding: 25px;
+}
+.del__hidden {
+  visibility: hidden;
+}
+.del-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.delete-Btn {
+  width: 160px;
+  height: 45px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
 .danger {
   background-color: red;
   color: #fff;
@@ -422,97 +459,95 @@ main {
   padding: 15px;
 }
 
-
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 992px) {
-    .section-center {
-      width: 95vw;
-    }
-  
-    .contacts {
-      width: 80%;
-    }
-  
-    .list-items {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .add-user {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .flex {
-      flex-direction: column;
-      gap: 1rem;
-    }
+  .section-center {
+    width: 95vw;
   }
-  
-  @media screen and (max-width: 768px) {
-    .contacts {
-      width: 90%;
-      margin-top: 2rem;
-    }
-  
-    .inputEdit {
-      padding: 12px;
-    }
-  
-    .btn {
-      width: 100%;
-      font-size: 1rem;
-    }
-  
-    .modal-container {
-      width: 90%;
-      height: auto;
-      padding: 2rem 1rem;
-    }
-  
-    #contactForm {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "name"
-        "address"
-        "number"
-        "secondLine"
-        "button";
-    }
-  
-    #contactForm * {
-      font-size: 1rem;
-    }
+
+  .contacts {
+    width: 80%;
   }
-  
-  @media screen and (max-width: 480px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    .contacts {
-      width: 95%;
-    }
-  
-    .list-items {
-      gap: 1rem;
-    }
-  
-    .editBtn,
-    .saveBtn {
-      font-size: 20px;
-    }
-  
-    i {
-      font-size: 28px;
-    }
-  
-    .alert-container {
-      font-size: 0.9rem;
-    }
+
+  .list-items {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
+  .add-user {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts {
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  .inputEdit {
+    padding: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .modal-container {
+    width: 90%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  #contactForm {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "address"
+      "number"
+      "secondLine"
+      "button";
+  }
+
+  #contactForm * {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .contacts {
+    width: 95%;
+  }
+
+  .list-items {
+    gap: 1rem;
+  }
+
+  .editBtn,
+  .saveBtn {
+    font-size: 20px;
+  }
+
+  i {
+    font-size: 28px;
+  }
+
+  .alert-container {
+    font-size: 0.9rem;
+  }
+}
