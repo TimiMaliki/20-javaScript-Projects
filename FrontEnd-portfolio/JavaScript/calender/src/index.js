@@ -36,10 +36,11 @@ const hours = calender.getHours()
 const mins = calender.getMinutes()
 const secs = calender.getSeconds()
 const dayDisplay = calender.getDay()
+const dateDisplay = calender.getDate()
 
 
 
-month.innerHTML = `${weekdays[dayDisplay]} ${months[monthDisplay] } ${monthDisplay}` 
+month.innerHTML = `${weekdays[dayDisplay]} ${months[monthDisplay]} ${dateDisplay} ` 
 year.innerHTML = yearDisplay
 time.innerHTML = `${hours}:${mins}:${secs} ${hours >= 12 ? "PM" : "AM"}`
 
