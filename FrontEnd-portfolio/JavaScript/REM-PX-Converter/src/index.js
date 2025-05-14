@@ -9,19 +9,41 @@ const resetBtn = document.querySelector(".reset-btn");
 
 
 
-// rightArrow.addEventListener("click", (e) => {
-//     remValueField()
-//     remValue.innerHTML = `${remValueInput.value}rem`
-//     pxValue.innerHTML = ""
-//     remValue.innerHTML = ""
-//     remValueInput.value = ""
-//     pxValueInput.value  = ""
-// })
 
-// leftArrow.addEventListener("click", (e) => {
-//     pxValueField()
-//     pxValue.innerHTML =  `${pxValueInput.value}px`
-// })
+
+
+
+rightArrow.addEventListener('click' , ()=>{
+    remFunc()
+    remValue.innerHTML = ""
+})
+
+leftArrow.addEventListener('click' , ()=>{
+    pxFunc()
+    pxValue.innerHTML = ""
+})
+
+
+const remFunc = ()=>{
+    if(!remValueInput.value){
+        alert("empty")
+ }else{
+     const result = remValueInput.value * 16
+     pxValue.innerHTML = `${result}px`
+     remValueInput.value = ''
+ }
+}
+
+
+const pxFunc = () => {
+    if(!pxValueInput.value){
+        alert("empty")
+    }else{
+        const result = pxValueInput.value / 16
+        remValue.innerHTML = `${result}rem`
+        pxValueInput.value = ""
+    }
+}
 
 
 resetBtn.addEventListener("click", (e) => {
@@ -30,44 +52,4 @@ resetBtn.addEventListener("click", (e) => {
     remValueInput.value = ""
     pxValueInput.value  = ""
 })
-
-// function remValueField(){
-
-//     pxValue.innerHTML = `${remValueInput.value * 16 } px` 
- 
-// }
-
-
-// function pxValueField(){
-//         remValue.innerHTML = `${pxValueInput.value / 16} rem`
-//         pxValue.innerHTML = ""
-//         // remValueInput.value = ""
-//         // pxValueInput.value  = ""
-// }
-
-
-
-rightArrow.addEventListener('click' , ()=>{
-    if(!remValueInput.value){
-           alert("empty")
-    }else{
-       
-        const result = remValueInput.value * 16
-        pxValue.innerHTML = `${result}px`
-        remValueInput.value = ''
-        remValue.innerHTML = ""
-    }
-})
-
-leftArrow.addEventListener('click' , ()=>{
-    if(!pxValueInput.value){
-        alert("empty")
-    }else{
-        pxValue.innerHTML = ""
-        const result = pxValueInput.value / 16
-        remValue.innerHTML = `${result}rem`
-        pxValueInput.value = ""
-    }
-})
-
 
