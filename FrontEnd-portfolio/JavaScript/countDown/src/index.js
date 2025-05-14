@@ -53,10 +53,11 @@ const futureTime = futureDate.getTime()
  const getRemainingTime  = () => {
     const today = new Date().getTime()
     
-    const dT =   futureTime - today
+    const dT =  today -futureTime  
+    // futureTime - today
 
     // if(futureDate.getDate() < 10){
-        //  dt = today - futureTime
+    //      dt = today - futureTime
     // }else{
     //   dT = futureTime - today
     // }
