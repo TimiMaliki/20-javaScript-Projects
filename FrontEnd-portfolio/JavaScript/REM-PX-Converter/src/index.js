@@ -63,7 +63,7 @@ resetBtn.addEventListener("click", (e) => {
 const emptyValue = ()=>{
     setTimeout(() =>{
         statusHtml.classList.remove("visibility")
-        update.innerHTML = "please prove a value"
+        update.innerHTML = "please provide a value"
     }, 1000)
 
     return
