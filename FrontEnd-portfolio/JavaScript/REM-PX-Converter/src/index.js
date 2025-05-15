@@ -28,11 +28,11 @@ leftArrow.addEventListener('click' , ()=>{
 
 const remFunc = ()=>{
     if(!remValueInput.value || remValueInput.value  <= 0){
-        // alert("empty")
-        remValue.innerHTML = "please prove a value"
+        emptyValue()
  }else{
      const result = remValueInput.value * 16
      pxValue.innerHTML = `${result}px`
+     SuccessStatus()
      remValueInput.value = ''
  }
 }
@@ -40,10 +40,11 @@ const remFunc = ()=>{
 
 const pxFunc = () => {
     if(!pxValueInput.value || pxValueInput.value == 0){
-        alert("empty")
+        emptyValue()
     }else{
         const result = pxValueInput.value / 16
         remValue.innerHTML = `${result}rem`
+        SuccessStatus()
         pxValueInput.value = ""
     }
 }
@@ -54,10 +55,34 @@ resetBtn.addEventListener("click", (e) => {
     remValue.innerHTML = ""
     remValueInput.value = ""
     pxValueInput.value  = ""
+    reset()
 })
 
 
 
-const empthyValue = ()=>{
-    statusHtml.classList.
+const emptyValue = ()=>{
+    setTimeout(() =>{
+        statusHtml.classList.remove("visibility")
+        update.innerHTML = "please prove a value"
+    }, 1000)
+
+    return
+}
+
+
+const SuccessStatus = ()=>{
+    setTimeout(() =>{
+        statusHtml.classList.remove("visibility")
+        update.textContent = "Success"
+    }, 1000)
+
+    return
+}
+
+
+const reset = ()=>{
+    setTimeout(() =>{
+        statusHtml.classList.remove("visibility")
+        update.textContent = "Start Converting"
+    }, 1000)
 }
