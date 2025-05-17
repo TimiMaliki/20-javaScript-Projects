@@ -2,7 +2,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // GSAP Object
 const greenSquare = document.querySelector('.greenSquare');
-
+gsap.to(greenSquare,{
+    duration: 2,
+    x: 200,
+    y: 200,
+    rotation: 360,
+    opacity:0.6,
+    background: "blue",
+    ease:'power1.out'
+})
 
 // gsap.from()
 const orangeSquare = document.querySelector('.orangeSquare');
