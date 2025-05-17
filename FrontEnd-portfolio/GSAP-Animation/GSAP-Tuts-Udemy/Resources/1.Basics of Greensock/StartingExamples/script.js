@@ -36,7 +36,15 @@ gsap.to(purpleSquare,{
 
 // gsap.fromTo()
 const blueSquare = document.querySelector('.blueSquare');
-
+gsap.fromTo(blueSquare , {
+ x: -500,
+ opacity: 0,
+}, {
+  duration : 2,
+  x:500,
+  opacity: 1,
+  ease:'power2.out'
+})
 
 // Delay & Repeat
 const circleYellow = document.querySelector('.circleYellow');
