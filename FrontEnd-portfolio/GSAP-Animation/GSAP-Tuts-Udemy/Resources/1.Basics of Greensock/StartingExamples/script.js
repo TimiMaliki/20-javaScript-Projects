@@ -51,6 +51,23 @@ const circleYellow = document.querySelector('.circleYellow');
 const circleRed = document.querySelector('.circleRed');
 const circleGreen  = document.querySelector('.circleGreen');
 
+gsap.to(circleYellow, {
+    duration:1,
+    x:500
+})
+gsap.to(circleRed , {
+    duration:1,
+    y:500,
+    delay:1,
+    repeat:-1,
+    yoyo: true
+})
+gsap.to(circleGreen , {
+    duration:1,
+    x:500,
+    delay:2
+})
+
 
 // Ease
 const circleBlue = document.querySelector('.circleBlue');
