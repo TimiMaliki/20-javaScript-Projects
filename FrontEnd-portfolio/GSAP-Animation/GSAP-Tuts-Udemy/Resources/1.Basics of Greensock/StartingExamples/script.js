@@ -71,6 +71,18 @@ gsap.to(circleGreen , {
 
 // Ease
 const circleBlue = document.querySelector('.circleBlue');
+gsap.to(circleBlue, {
+    x: 500,
+    duration: 2,
+    ease: 'bounce.out'
+    //linear
+    //power2.inOut
+        //power4.inOut
+        // back.out(1.5)
+        // elastic.out(1 ,0.3)
+        // bounce.out
+})
+
 
 // Stagger
 
