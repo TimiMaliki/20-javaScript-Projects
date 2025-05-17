@@ -25,6 +25,10 @@ const tl = gsap.timeline()
     duration : 1 ,
     rotate: 100
  })
+ tl.to(purpleBox, {
+    duration : 1 ,
+    opacity: 0.4
+ })
 
 // The Position Parameter
 const yellowCircle = document.querySelector('.yellowCircle ');
