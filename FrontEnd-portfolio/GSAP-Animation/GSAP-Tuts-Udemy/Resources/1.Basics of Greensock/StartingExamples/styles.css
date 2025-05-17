@@ -1,0 +1,60 @@
+.square {
+ width: 100px;
+ height: 100px;
+ margin: 10px;
+}
+.greenSquare {
+    background-color: #1ABC9C;
+}
+.orangeSquare {
+    background-color: #FF5733;
+}
+.purpleSquare {
+    background-color: #9B59B6;
+}
+.blueSquare {
+    background-color: #3498DB;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 100%;
+}
+.circleYellow {
+    background-color: #F1C40F;
+}
+.circleRed {
+    background-color: #E74C3C;
+}
+.circleGreen {
+    background-color: #27AE60;
+}
+.circleBlue {
+    background-color: #2980B9;
+}
+.box {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.orangeBox{
+    background-color: #FF5733;
+}
+.purpleBox{
+    background-color:#9B59B6;
+}
+.blueBox{
+    background-color: #3498DB;
+}
+.greenBox{
+    background-color: #1ABC9C;
+}
+.yellowBox{
+    background-color: #F1C40F;
+}
+.redBox {
+    background-color: #E74C3C;
+}

@@ -1,0 +1,321 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+h1 {
+    font-size: clamp(1.875rem, 0.9999rem + 4.375vw, 6.25rem);
+}
+h2 {
+    font-size: clamp(1.5625rem, 1.25rem + 1.5625vw, 3.125rem);
+}
+h3 {
+    font-weight: 300;
+    font-size: clamp(1.5625rem, 1.4375rem + 0.625vw, 2.1875rem);
+}
+h4 {
+    font-size: clamp(1.125rem, 1.1rem + 0.125vw, 1.25rem);
+}
+p {
+    font-size: clamp(1.125rem, 1.0375rem + 0.4375vw, 1.5625rem);
+    line-height: 1.5em;
+    padding-bottom: 15px;
+}
+p.paragraph-small {
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+:root {
+    --white: #ffffff; 
+    --rose: #E6D8D6;
+    --gray: #685C61;
+    --mauve: #877D87;
+    --purple: #6C6065;
+    --lavander: #5D5458;
+}
+.container {
+    position: relative;
+    max-width: 1260px;
+    padding: 0 calc((100% - 1260px) / 2);
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(66, 60, 61, 0.6);
+}
+.button {
+    display: inline-block;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.button-rose {
+    background-color: var(--rose);
+    color: var(--gray);
+}
+.button-gray {
+    background-color: var(--gray);
+    color: var(--white); 
+}
+.img-responsive {
+    position: relative;
+    height: 0;
+}
+.img-responsive img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+}
+
+/* Progress bar section */
+.progress {
+    position: fixed;
+    background-color: var(--rose);
+    width: 0;
+    height: 7px;
+    z-index: 1
+}
+
+/* Header section */
+section.header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    color: var(--white);
+    padding-top: 50px;
+}
+section.header ul li {
+    display: inline-block;
+}
+section.header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.header .navigation a {
+    color: var(--white);
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 0 15px;
+}
+section.header ul li:nth-last-child(1) a {
+    padding-right: 0;
+}
+
+/* Hero section */
+section.hero {
+    position: relative;
+    background-image: url(Images/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+}
+section.hero h1 {
+    padding-bottom: 20px;
+}
+section.hero h3 {
+    padding-bottom: 60px;
+}
+section.hero .divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--white);
+}
+section.hero .divider-top {
+    margin-bottom: 50px;
+}
+section.hero .divider-bottom {
+    margin-top: 80px;
+}
+  
+/* About section */
+section.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: var(--gray);
+}
+section.about .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.about .col-left {
+    width: 65%;
+}
+section.about .col-right {
+    width: 35%;
+}
+section.about .img-responsive {
+    padding-bottom: 119.01%;
+}
+section.about p {
+    max-width: 700px;
+    width: 100%;
+    padding-left: 40px;
+    padding-bottom: 50px;
+}
+section.about h2 {
+    padding-bottom: 50px;
+}
+section.about .button {
+    margin-left: 40px;
+}
+  
+/* Shop section */
+section.shop {
+    background-color: rgba(230, 216, 214, .6);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    color: var(--gray);
+}
+section.shop h2.title {
+    padding-bottom: 150px;
+}
+section.shop .row {
+    display: flex;
+    padding-bottom: 150px;
+}
+section.shop .col-left,
+section.shop .col-right {
+    width: 50%;
+}
+section.shop .img-responsive {
+    padding-bottom: 100%;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+section.shop .col-right .img-responsive {
+    margin-top: 130px;
+}
+section.shop h2 {
+    padding-top: 30px;
+}
+
+/* Call-to-action section */
+section.cta {
+    height: 80vh;
+    background-image: url(Images/cta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.cta h1 {
+    padding-bottom: 20px;
+}
+section.cta h3 {
+    padding-bottom: 60px;
+}
+
+/* New products section */
+section.new {
+    padding-top: 200px;
+    padding-bottom: 250px;
+    background-color: var(--mauve);
+    color: var(--white);
+}
+section.new .row {
+    display: flex;
+}
+section.new .col-left {
+    width: 30%;
+}
+section.new .col-center {
+    width: 40%;
+    padding: 0 40px;
+}
+section.new .col-right {
+    width: 30%;
+    align-self: flex-end;
+}
+section.new .col-left .img-responsive {
+    padding-bottom: 123%;
+}
+section.new .col-right .img-responsive {
+    padding-bottom: 100%;
+    margin-bottom: -100px;
+}
+section.new .col-center h2 {
+    padding-bottom: 30px;
+}
+section.new .col-center a {
+    margin-top: 50px;
+    margin-left: 40px;
+}
+section.new p {
+    padding-left: 40px;
+    max-width: 450px;
+    width: 100%;
+}
+
+/* Footer section */
+section.footer {
+    background-color: var(--purple);
+    color: var(--white);
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+section.footer img {
+    padding-bottom: 20px;
+}
+section.footer .row {
+    display: flex;
+}
+section.footer .col-left {
+    width: 25%;
+}
+section.footer .col-left p {
+    max-width: 280px;
+    width: 100%;
+    opacity: 0.6;
+}
+section.footer h4 {
+    text-transform: capitalize;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+section.footer .links a {
+    color: var(--white);
+    font-size: 16px;
+    opacity: 0.7;
+}
+section.footer ul li {
+    padding-bottom: 10px;
+}
+
+/* Copyright section */
+section.copyright {
+    padding-top: 15px;
+    background-color: var(--lavander);
+}
+section.copyright a {
+    color: var(--white);
+    font-weight: 300;
+}

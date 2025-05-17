@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+section {
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+.graySection {
+    background-color: #FFF9EC;
+}
+.pinkSection {
+    background-color: #FFE5D4;
+}
+.blueSection {
+    background-color: #BEE1FF;
+}
+.tanSection {
+    background-color: #D9B384;
+}
+.greenSection {
+    background-color: #BFB48F;
+}
+.navySquare {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #001F54;
+}
+.redSquare {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #ed1c24;
+}
+.redBar {
+    background-color: #8C3A3A;
+    width: 10%;
+    height: 50px;
+    border-radius: 20px;
+}
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
