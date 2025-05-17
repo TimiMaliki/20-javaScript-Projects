@@ -85,6 +85,13 @@ gsap.to(circleBlue, {
 
 
 // Stagger
-
+gsap.from(".box", {
+    y:-50,
+    stagger: {
+        each : 0.1,
+        from : "center",
+        // center,edges,end
+    }
+})
 
 });
