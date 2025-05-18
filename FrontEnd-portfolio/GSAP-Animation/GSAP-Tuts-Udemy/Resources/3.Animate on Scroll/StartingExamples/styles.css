@@ -47,3 +47,12 @@ h1 {
     transform: translate(-50%, -50%);
     font-size: 50px;
 }
+img{
+    width: 100px;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 50%;
+}

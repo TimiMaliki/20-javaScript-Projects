@@ -7,11 +7,12 @@ const navySquare = document.querySelector('.navySquare');
 const sectionTitle = document.querySelector('h1');
 
 gsap.to(navySquare ,{
-    duration : 2,
+    duration : 10,
     x : 300, 
     y: 500,
-    rotate: 90,
+    rotation: 90,
     borderRadius : "50%",
+    ease:"bounce",
     scale : 4.9,
     scrollTrigger :  sectionTitle
 })
@@ -19,7 +20,19 @@ gsap.to(navySquare ,{
 // ScrollTrigger Basic Implementation
 // #f3a712
 const redSquare = document.querySelector('.redSquare');
-
+gsap.to(redSquare,{
+    duration : 10,
+    x : 700, 
+    rotation: 360,
+    background : "#f3a712",
+    scrollTrigger : {
+        trigger : redSquare,
+        markers : true,
+        start: "top 75%",
+        end : "bottom 25%",
+        toggleActions : "restart pause reverse reset"
+    }
+})
 
 // ScrollTrigger Scrub & Pin
 const tanSection = document.querySelector('.tanSection');
