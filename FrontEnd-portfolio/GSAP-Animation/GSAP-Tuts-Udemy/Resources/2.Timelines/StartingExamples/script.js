@@ -58,28 +58,50 @@ animate
 const yellowSquare = document.querySelector('.yellowSquare');
 const timeline = gsap.timeline();
 
-
+timeline
+.to(yellowSquare,{
+    duration : 2,
+    x : 300,
+    rotation:90,
+    backgroundcolor:  "#6B8E23",
+    // borderRadius : "50%"
+})
+.addLabel("smaller")
+.to(yellowSquare,{
+    duration : 1,
+    scaleX: 0.5,
+    scaleY: 0.5,
+    backgroundcolor:  "#FF5733",
+    borderRadius : "50%"
+})
+.to(yellowSquare,{
+    duration : 1,
+    x: 100,
+    y:100,
+    backgroundcolor:  "##C70039",
+    // borderRadius : "50%"
+})
 
 // Add control buttons
 document.querySelector('#pause').addEventListener('click', function() {
-    
+    timeline.pause()
 });
   
 document.querySelector('#restart').addEventListener('click', function() {
-    
+    timeline.restart()
 });
   
 document.querySelector('#reverse').addEventListener('click', function() {
-    
+    timeline.reverse()
 });
   
 document.querySelector('#play').addEventListener('click', function() {
-    
+    timeline.play()
 });
 
 // Add play button with a delay
 document.querySelector('#play-delay').addEventListener('click', function() {
-    
+    timeline.play("smaller")
 });
 
 });
