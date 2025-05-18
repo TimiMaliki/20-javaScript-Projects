@@ -35,6 +35,21 @@ const yellowCircle = document.querySelector('.yellowCircle ');
 const blueCircle = document.querySelector('.blueCircle');
 const greenCircle  = document.querySelector('.greenCircle');
 
+const animate = gsap.timeline()
+
+animate
+.to(yellowCircle ,{
+    duration : 2,
+    x : 300
+})
+.to(blueCircle,{
+    duration : 1,
+    x : 300
+}, 2)
+.to(greenCircle,{
+    duration : 1,
+    x : 300
+}, 3)
 
 // Timeline Control and Labels
 // #6B8E23
