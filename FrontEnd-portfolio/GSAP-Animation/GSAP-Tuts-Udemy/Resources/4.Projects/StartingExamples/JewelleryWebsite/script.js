@@ -28,6 +28,38 @@ const dividerBottom = document.querySelector('.hero .divider-bottom');
 const logo = document.querySelector('.header .logo');
 const navLinks = document.querySelectorAll('.header li');
 
+const tlHeader = gsap.timeline()
+
+tlHeader
+.from( [headerTitle,headerSubTitle,headerButton],{
+    opacity : 0 ,
+    y : 100,
+    duration : 0.8,
+    stagger : 0.2
+})
+.from(dividerTop, {
+  scaleX : 0,
+  duration : 1 , 
+  ease : "power1.inOut",
+  transformOrigin : "left"
+})
+.from(dividerBottom, {
+  scaleX : 0,
+  duration : 1 , 
+  ease : "power1.inOut",
+  transformOrigin : "right"
+} , '-=1')
+.from([logo,navLinks],{
+  y : 10,
+  opacity : 0 ,
+  stagger : 0.2,
+},1)
+
+.to(heroImg,{
+  duration : 3,
+  backgroundPosition : "50% 70%",
+  ease : "slow(0.7,0.7,false)"
+},1)
 
 /* About section animations */
 const aboutSection = document.querySelector('.about');
@@ -73,6 +105,23 @@ tlAbout
 const shopSection = document.querySelector('.shop');
 const shopImages = document.querySelectorAll('.shop .img-responsive');
 
+const tlShop = gsap.timeline({
+  scrollTrigger :{
+    trigger : shopSection,
+    start : "top center" ,
+    scrub : true
+  }
+})
+
+tlShop
+.from(shopImages,{
+    duration : 1 ,
+    opacity : 0,
+    y : 150,
+    stagger : 0.2,
+    ease : "power1.out"
+})
+
 
 /* Cta section animations */
 const ctaSection = document.querySelector('.cta');
@@ -110,6 +159,10 @@ const tlNew = gsap.timeline({
 });
 
 tlNew
+.to(newSection , {
+  background : "#5D5458",
+  duration: 1,
+})
   .from(newImages, {
     opacity: 0,
     y: 100,
