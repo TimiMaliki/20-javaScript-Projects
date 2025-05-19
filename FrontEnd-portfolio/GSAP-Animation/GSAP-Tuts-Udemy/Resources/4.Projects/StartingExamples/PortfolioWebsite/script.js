@@ -7,12 +7,55 @@ const preloader = document.querySelector('.preloader');
 const counter = document.querySelector('.counter');
 const loader = document.querySelector('.loader');
 
+gsap.to(loader , {
+  rotation : 360,
+  duration : 1, 
+  repeat : -1,
+  ease : "linear"
+})
+
+const duration = 3000
+
+const tl = gsap.timeline({
+  onComplete : () => {
+    preloader.style.display = "none"
+  }
+})
+
+tl.to(counter , {
+  textContent : "100%",
+  duration : duration / 1000,
+  onUpdate : ()=> {
+      const progress = Math.round(tl.progress() *  100)
+      counter.textContent = `${progress}%`
+  }
+})
+
+
 
 // Cursor Animations
 const cursorFollower = document.querySelector(".cursor-follower");
 const links =  document.querySelectorAll("a");
 
+document.addEventListener('mousemove', (e) => {
+  gsap.to(cursorFollower, {
+      duration: 0.4,
+      x: e.clientX,
+      y: e.clientY,
+      ease: 'power2.out'
+  });
+});
 
+links.forEach((link) => {
+  link.addEventListener("mouseenter" , () => {
+    cursorFollower.classList.add("active")
+    link.style.color = "red"
+  })
+  link.addEventListener("mouseleave" , () => {
+    cursorFollower.classList.remove("active")
+    link.style.color = "white"
+  })
+})
 
 // Marquee Animations
 const marquee = document.querySelector('.marquee');
