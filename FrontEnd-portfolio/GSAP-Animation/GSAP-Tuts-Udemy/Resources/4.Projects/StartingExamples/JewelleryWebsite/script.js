@@ -5,6 +5,18 @@ gsap.registerPlugin(ScrollTrigger);
 /* Progress bar animations */
 const progress = document.querySelector('.progress');
 
+gsap.to(progress, {
+  width : "100%",
+  duration : 1,
+  ease : "power1.inOut",
+  scrollTrigger : {
+    trigger : "body",
+    start: "top 0%",
+    end : "bottom 100%",
+    scrub: true
+  }
+})
+
 
 /* Header section animations */
 const heroImg = document.querySelector('.hero');
