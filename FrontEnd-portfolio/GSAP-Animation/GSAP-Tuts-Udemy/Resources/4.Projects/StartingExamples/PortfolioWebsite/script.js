@@ -124,6 +124,28 @@ const skillsSection = document.querySelector('.skills');
 const skillsTitle = document.querySelector('.skills h2');
 const skillsList = document.querySelectorAll('.skills li');
 
+const tlSkill = gsap.timeline({
+  scrollTrigger : {
+    trigger : skillsSection,
+    start: "top center"
+  }
+})
+
+tlSkill
+.from(skillsTitle , {
+  duration : 1 ,
+  opacity : 0,
+  y : 50 ,
+  ease : 'power1.out'
+})
+.from(skillsList , {
+  duration : 1 ,
+  opacity : 0,
+  y : 50 ,
+  ease : 'power1.out',
+  stagger : 0.2
+})
+
 
 /* Contact section animations */
 const contactSection = document.querySelector('.contact');
