@@ -1,0 +1,24 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #1d1d1d;
+  }
+  
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text {
+    font-size: 120px;
+    max-width: 75%;
+    text-align: center;
+    color: transparent;
+    background-image: url('Images/background.jpg');
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  
