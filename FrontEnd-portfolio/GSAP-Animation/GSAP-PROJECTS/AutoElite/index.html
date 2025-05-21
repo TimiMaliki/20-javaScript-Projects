@@ -28,104 +28,19 @@
   </head>
   <body>
     <!----======= Navbar menu =======----->
-    <nav class="navbar fixed-top navbar-expand-lg" style="background: red">
+    <nav class="navbar fixed-top navbar-expand-lg" style="background: red;">
       <div class="container-xxl">
-        <a class="navbar-brand pl-3 text-black d-block d-lg-none" href="#Brand"
-          ><span
-            class="lead fw-bolder fs-4 me-3"
-            style="
-              margin-left: 1rem;
-              font-family: Kanit, sans-serif;
-              font-weight: 400;
-              font-style: normal;
-              color: #111;
-            "
-            >Alabi Elite</span
-          ></a
-        >
-        <div
-          class="collapse navbar-collapse justify-content-between align-center"
-          id="navbarSupportedContent"
-        >
-          <div class="brand d-none d-lg-block">
-            <a class="navbar-brand pl-3 text-black" href="#Brand"
-              ><span
-                class="lead fw-bolder fs-4 me-3"
-                style="
-                  margin-left: 1rem;
-                  font-family: Kanit, sans-serif;
-                  font-weight: 400;
-                  font-style: normal;
-                  color: #111;
-                "
-                >Alabi Elite</span
-              ></a
-            >
-          </div>
-          <ul
-            class="navbar-nav p-2 gap-3 mb-2 mb-lg-0"
-            style="
-              font-family: Kanit, sans-serif;
-              font-weight: 300;
-              font-style: normal;
-            "
+        <!-- Mobile Brand Name -->
+        <a class="navbar-brand text-black d-lg-none" href="#Brand">
+          <span
+            class="lead fw-bolder fs-4"
+            style="font-family: Kanit, sans-serif; color: #111;"
           >
-            <li class="nav-item">
-              <a
-                class="nav-link active text-light fs-5 text-start text-md-center"
-                aria-current="page"
-                href="#"
-                >Cars</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-light fs-5 text-start text-md-center"
-                href="#about"
-                >Accessories</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-light fs-5 text-start text-md-center"
-                href="#services"
-                >Services</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-light fs-5 text-start text-md-center"
-                href="#team"
-                >About us</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-light fs-5 text-start text-md-center"
-                href="#contact"
-                >Contact Us</a
-              >
-            </li>
-          </ul>
-
-          <div class="d-flex p-2 justify-content-start align-items-start">
-            <button
-              type="button"
-              class="btn btn-xl text-dark rounded-pill d-md-block"
-              style="
-                background-color: #fff;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                font-size: 22px;
-                font-family: Kanit, sans-serif;
-                font-weight: 300;
-                font-style: normal;
-              "
-            >
-              Login
-            </button>
-          </div>
-        </div>
-
+            Alabi Elite
+          </span>
+        </a>
+    
+        <!-- Toggler Button -->
         <button
           class="navbar-toggler"
           type="button"
@@ -137,8 +52,66 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+    
+        <!-- Navbar Links and Buttons -->
+        <div
+          class="collapse navbar-collapse justify-content-between align-items-center"
+          id="navbarSupportedContent"
+        >
+          <!-- Desktop Brand Name -->
+          <a class="navbar-brand text-black d-none d-lg-block" href="#Brand">
+            <span
+              class="lead fw-bolder fs-4"
+              style="font-family: Kanit, sans-serif; color: #111;"
+            >
+              Alabi Elite
+            </span>
+          </a>
+    
+          <!-- Navigation Links -->
+          <ul
+            class="navbar-nav ms-auto me-auto mb-2 mb-lg-0 text-center"
+            style="font-family: Kanit, sans-serif; font-weight: 300;"
+          >
+            <li class="nav-item">
+              <a class="nav-link active text-light fs-5" aria-current="page" href="#">
+                Cars
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fs-5" href="#about">Accessories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fs-5" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fs-5" href="#team">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fs-5" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+    
+          <!-- Login Button -->
+          <div class="text-center text-lg-start">
+            <button
+              type="button"
+              class="btn text-dark rounded-pill"
+              style="
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                font-size: 18px;
+                font-family: Kanit, sans-serif;
+                font-weight: 300;
+              "
+            >
+              Login
+            </button>
+          </div>
+        </div>
       </div>
     </nav>
+    >
 
     <!----======= Hero section =======----->
     <section
