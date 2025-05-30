@@ -9,12 +9,3 @@
 
 // console.log(myPromise)
 
-
-
-const validate = true
-
-if(!validate){
-    console.log("true")
-}else{
-    console.log("false")
-}
